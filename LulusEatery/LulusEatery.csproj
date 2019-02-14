@@ -5,9 +5,6 @@
     <ProjectGuid>{2E69232E-675F-4656-85A2-217FF267AC2E}</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\scrolling-nav.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -18,5 +15,9 @@
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSS_SCSS\" />
+    <Folder Include="images\" />
   </ItemGroup>
 </Project>
