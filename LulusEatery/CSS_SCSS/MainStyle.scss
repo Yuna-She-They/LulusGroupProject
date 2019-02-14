@@ -1,2 +1,24 @@
-﻿body {
+﻿//Declare color variables
+$backgroud-color:000000;
+$text-color:#FFFFFF;
+
+body {
+    background-color:$backgroud-color;
+    color:$text-color;
+}
+
+a:link {
+    color:#ff0000;
+}
+
+a:hover{
+    color:#ff6a00;
+}
+
+a:visited {
+    color:#ffd800;
+}
+
+a:active {
+    color:#4cff00;
 }
