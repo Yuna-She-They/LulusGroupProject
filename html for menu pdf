@@ -32,7 +32,7 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:324.00px;top:88.26px" class="cls_002"><span class="cls_002">Loaded Nacho Tots</span></div>
 <div style="position:absolute;left:551.20px;top:87.94px" class="cls_007"><span class="cls_007">$6.95</span></div>
 <div style="position:absolute;left:586.08px;top:87.82px" class="cls_002"><span class="cls_002">Sweet Potato Black Bean Burger</span></div>
-<div style="position:absolute;left:64.24px;top:103.87px" class="cls_004"><span class="cls_004">Served with ranch dipping sauce. These cauliflower buffalo bites are a measly 150 calories</span></div>
+<div style="position:absolute;left:64.24px;top:103.87px" class="cls_004"><span class="cls_004">Served with ranch dipping sauce. Calories:150</span></div>
 <div style="position:absolute;left:324.00px;top:104.06px" class="cls_004"><span class="cls_004">tater tots topped with jackfruit carnitas</span></div>
 <div style="position:absolute;left:586.08px;top:103.62px" class="cls_004"><span class="cls_004">house-made sweet potato black bean</span></div>
 <div style="position:absolute;left:280.04px;top:102.26px" class="cls_002"><span class="cls_002">lg $9.95</span></div>
@@ -45,7 +45,7 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:324.00px;top:136.46px" class="cls_004"><span class="cls_004">and garnished with green onion, pickled</span></div>
 <div style="position:absolute;left:64.24px;top:142.27px" class="cls_004"><span class="cls_004">with cranberries, shredded carrot, sunflower</span></div>
 <div style="position:absolute;left:324.00px;top:147.26px" class="cls_004"><span class="cls_004">jalapeño and cilantro</span></div>
-<div style="position:absolute;left:64.24px;top:153.07px" class="cls_004"><span class="cls_004">seeds and maple mustard vinaigrette. Calories:84 </span></div>
+<div style="position:absolute;left:64.24px;top:153.07px" class="cls_004"><span class="cls_004">seeds and maple mustard vinaigrette. Calories:84</span></div>
 <div style="position:absolute;left:551.20px;top:148.02px" class="cls_007"><span class="cls_007">$6.95</span></div>
 <div style="position:absolute;left:586.08px;top:147.82px" class="cls_002"><span class="cls_002">Buffalo Blue Burger</span></div>
 <div style="position:absolute;left:586.08px;top:163.62px" class="cls_004"><span class="cls_004">house-made sweet potato black bean burger</span></div>
@@ -58,7 +58,7 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:586.08px;top:185.22px" class="cls_004"><span class="cls_004">onion, spicy buffalo sauce and creamy ranch</span></div>
 <div style="position:absolute;left:64.24px;top:191.47px" class="cls_004"><span class="cls_004">with cajun seasoning and spicy chipotle</span></div>
 <div style="position:absolute;left:324.00px;top:196.46px" class="cls_004"><span class="cls_004">a creamy, house-made caesar dressing,</span></div>
-<div style="position:absolute;left:64.24px;top:202.27px" class="cls_004"><span class="cls_004">dipping sauce. Calories:160 </span></div>
+<div style="position:absolute;left:64.24px;top:202.27px" class="cls_004"><span class="cls_004">dipping sauce. Calories:160</span></div>
 <div style="position:absolute;left:324.00px;top:207.26px" class="cls_004"><span class="cls_004">chickpea croutons, capers, lemon and</span></div>
 <div style="position:absolute;left:550.47px;top:207.58px" class="cls_007"><span class="cls_007">$7.95</span></div>
 <div style="position:absolute;left:586.08px;top:207.82px" class="cls_002"><span class="cls_002">The Robo Special</span></div>
@@ -73,7 +73,7 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:586.08px;top:256.02px" class="cls_004"><span class="cls_004">made butternut squash cheese sauce</span></div>
 <div style="position:absolute;left:64.24px;top:262.27px" class="cls_004"><span class="cls_004">sauce topped with walnut parmesan.</span></div>
 <div style="position:absolute;left:64.24px;top:273.07px" class="cls_004"><span class="cls_004">(make it chili, buffalo, pesto or nacho</span></div>
-<div style="position:absolute;left:64.24px;top:283.87px" class="cls_004"><span class="cls_004">mac for no extra charge) Calories:310 </span></div>
+<div style="position:absolute;left:64.24px;top:283.87px" class="cls_004"><span class="cls_004">mac for no extra charge) Calories:310</span></div>
 <div style="position:absolute;left:314.10px;top:269.60px" class="cls_003"><span class="cls_003">Wraps & Sandwiches</span></div>
 <div style="position:absolute;left:551.47px;top:278.50px" class="cls_007"><span class="cls_007">$8.95</span></div>
 <div style="position:absolute;left:586.08px;top:278.62px" class="cls_002"><span class="cls_002">Sliders</span></div>
@@ -92,7 +92,7 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:64.24px;top:354.67px" class="cls_004"><span class="cls_004">made, butternut squash cheese, sour</span></div>
 <div style="position:absolute;left:291.82px;top:349.86px" class="cls_007"><span class="cls_007">$6.95</span></div>
 <div style="position:absolute;left:324.00px;top:349.82px" class="cls_002"><span class="cls_002">Sweet Potato Falafel</span></div>
-<div style="position:absolute;left:64.24px;top:365.47px" class="cls_004"><span class="cls_004">cream, green onion and cilantro. Calories:308 </span></div>
+<div style="position:absolute;left:64.24px;top:365.47px" class="cls_004"><span class="cls_004">cream, green onion and cilantro. Calories:308</span></div>
 <div style="position:absolute;left:324.00px;top:365.62px" class="cls_004"><span class="cls_004">our version of the mediterranean sandwich.</span></div>
 <div style="position:absolute;left:551.09px;top:359.58px" class="cls_007"><span class="cls_007">$8.95</span></div>
 <div style="position:absolute;left:586.08px;top:360.22px" class="cls_002"><span class="cls_002">Loaded Nacho Crunch Wrap</span></div>
@@ -113,7 +113,7 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:324.00px;top:420.62px" class="cls_002"><span class="cls_002">Buffalo Caesar Wrap</span></div>
 <div style="position:absolute;left:64.24px;top:436.27px" class="cls_004"><span class="cls_004">and garnished with green onion, pickled</span></div>
 <div style="position:absolute;left:324.00px;top:436.42px" class="cls_004"><span class="cls_004">house-made crispy buffalo cauliflower</span></div>
-<div style="position:absolute;left:64.24px;top:447.07px" class="cls_004"><span class="cls_004">jalapeño and cilantro. Calories:581.5 </span></div>
+<div style="position:absolute;left:64.24px;top:447.07px" class="cls_004"><span class="cls_004">jalapeño and cilantro. Calories:581.5</span></div>
 <div style="position:absolute;left:324.00px;top:447.22px" class="cls_004"><span class="cls_004">bites on a whole wheat tortilla with</span></div>
 <div style="position:absolute;left:551.09px;top:442.58px" class="cls_007"><span class="cls_007">$8.95</span></div>
 <div style="position:absolute;left:586.08px;top:441.82px" class="cls_002"><span class="cls_002">Winter Quinoa Wrap</span></div>
@@ -131,7 +131,6 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:64.24px;top:496.27px" class="cls_004"><span class="cls_004">made butternut squash cheese sauce,</span></div>
 <div style="position:absolute;left:64.24px;top:507.07px" class="cls_004"><span class="cls_004">sour cream and garnished with green</span></div>
 <div style="position:absolute;left:291.09px;top:502.14px" class="cls_007"><span class="cls_007">$7.95</span></div>
-<img src="buffalowrap.jpg" width=220 height=220 style="float: right; margin-right: 10 px; margin-bottom: 5px; border: solid black 1px; padding: 2px" />
 <div style="position:absolute;left:324.00px;top:502.22px" class="cls_002"><span class="cls_002">Buffalo Cauliflower Wrap</span></div>
 <div style="position:absolute;left:64.24px;top:517.87px" class="cls_004"><span class="cls_004">onion and cilantro</span></div>
 <div style="position:absolute;left:324.00px;top:518.02px" class="cls_004"><span class="cls_004">house-made crispy cauliflower bites on a</span></div>
@@ -161,7 +160,7 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:295.20px;top:111.98px" class="cls_002"><span class="cls_002">Kids Nachos</span></div>
 <div style="position:absolute;left:359.03px;top:111.98px" class="cls_002"><span class="cls_002">.......................................................................................................$4.95</span></div>
 <div style="position:absolute;left:61.92px;top:127.06px" class="cls_004"><span class="cls_004">and sour cream with roasted pepitas,</span></div>
-<div style="position:absolute;left:61.92px;top:137.86px" class="cls_004"><span class="cls_004">green onion and cilantro. Calories:232 </span></div>
+<div style="position:absolute;left:61.92px;top:137.86px" class="cls_004"><span class="cls_004">green onion and cilantro. Calories:232</span></div>
 <div style="position:absolute;left:295.20px;top:131.98px" class="cls_002"><span class="cls_002">Mini Burger (1)</span></div>
 <div style="position:absolute;left:354.49px;top:131.98px" class="cls_002"><span class="cls_002">...........................................................................................................$3.95</span></div>
 <div style="position:absolute;left:295.20px;top:151.98px" class="cls_002"><span class="cls_002">Cheesy Tots</span></div>
@@ -220,6 +219,5 @@ div.cls_006{font-family:Arial,serif;font-size:18.1px;color:rgb(43,42,41);font-we
 <div style="position:absolute;left:335.48px;top:536.98px" class="cls_004"><span class="cls_004">call in your order for pick-up</span></div>
 <div style="position:absolute;left:365.13px;top:547.78px" class="cls_004"><span class="cls_004">(314) 300-8215</span></div>
 </div>
-
 </body>
 </html>
