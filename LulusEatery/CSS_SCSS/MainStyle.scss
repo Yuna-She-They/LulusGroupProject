@@ -1,14 +1,71 @@
 ﻿//Declare color variables
-$backgroud-color:000000;
-$text-color:#FFFFFF;
+$darktheme-bgcolor:#000000;
+$darktheme-textcolor:#FFFFFF;
+$backgroud-color:#FFFFFF;
+$text-color:#000000;
+
+
+/*reset styles*/
+html {
+    font-size:16px;
+}
+
+a,article,body,div,figure,footer,header,h1,audio,
+h2,h3,img,li,nav,p,section,ul,fieldset,form,input,label,legend,textarea {
+    border:0;
+    padding:0;
+    margin:0;
+}
+
 
 body {
     background-color:$backgroud-color;
     color:$text-color;
+    font-family:Verdana,Arial,sans-serif;
 }
 
+header {
+    padding-top: 2em;
+    text-align:center;
+    color:#43a554;
+    font-size:18px;
+}
+
+article {
+
+    padding: 2em;
+    color:$text-color;
+
+}
+
+.container {
+
+    /* max-width 1920px*/
+    margin:0 auto;
+    position:relative;
+    background-color:$text-color;
+    background:url("../images/DominguezAndrew_2017012401591_squarespace.jpg");
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background-color:$text-color;
+    min-height:100vh;
+}
+
+.menuname {
+    color:green;
+    font-weight:bold;
+}
+
+
 a:link {
-    color:#ff0000;
+    color:#6d6d6d;
+    text-decoration:none;
 }
 
 a:hover{
@@ -16,9 +73,16 @@ a:hover{
 }
 
 a:visited {
-    color:#ffd800;
+    color:#9e9e9e;
 }
 
 a:active {
     color:#4cff00;
+}
+
+footer {
+    font-size:14px;
+    text-align:center;
+    text-decoration:none;
+    color:#9e9e9e;
 }
