@@ -9,8 +9,8 @@ h2, h3, img, li, nav, p, section, ul, fieldset, form, input, label, legend, text
   margin: 0; }
 
 body {
-  background-color: 0;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #000000;
   font-family: Verdana,Arial,sans-serif; }
 
 header {
@@ -21,13 +21,13 @@ header {
 
 article {
   padding: 2em;
-  color: #FFFFFF; }
+  color: #000000; }
 
 .container {
   /* max-width 1920px*/
   margin: 0 auto;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #000000;
   background: url("../images/DominguezAndrew_2017012401591_squarespace.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -36,7 +36,7 @@ article {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #000000;
   min-height: 100vh; }
 
 .menuname {
