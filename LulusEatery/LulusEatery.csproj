@@ -20,6 +20,7 @@
     <Content Include="images\DominguezAndrew_2017012401591_squarespace.jpg" />
     <Content Include="images\static1.squarespace.com.jpg" />
     <Content Include="menu.html" />
+    <Content Include="ping_pong.html" />
     <Content Include="Scripts\scrolling-nav.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
