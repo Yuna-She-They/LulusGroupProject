@@ -56,6 +56,9 @@ a:visited {
 a:active {
   color: #4cff00; }
 
+hr .menu {
+  border: 1px solid #000000; }
+
 footer {
   font-size: 14px;
   text-align: center;
