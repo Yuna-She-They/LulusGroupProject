@@ -41,6 +41,11 @@ article {
 	background-color: white;
 	min-height: 100vh;
 }
+
+.menuname {
+	color: green;
+	font-weight: bold;
+}
   
 
 a:link {
