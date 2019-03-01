@@ -17,15 +17,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="images\DominguezAndrew_2017012401591_squarespace.jpg" />
+    <Content Include="images\static1.squarespace.com.jpg" />
     <Content Include="menu.html" />
+    <Content Include="ping_pong.html" />
     <Content Include="Scripts\scrolling-nav.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Sql_Scripts\LulusDB.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

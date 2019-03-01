@@ -2,7 +2,7 @@
 html {
    font-size: 16px;
 }
-a, article, body, div, figure, footer, header, h1, audio, 
+a, article, body, div, figure, footer, header, h1, audio,
 h2, h3, img, li, nav, p, section, ul, fieldset, form, input, label, legend, textarea {
    border: 0;
    padding: 0;
@@ -11,7 +11,7 @@ h2, h3, img, li, nav, p, section, ul, fieldset, form, input, label, legend, text
 
 /* body */
 body {
-  background-color: #FFFFFF; 
+  background-color: #FFFFFF;
   font-family: Verdana, Arial, sans-serif;
 }
 header {
@@ -31,7 +31,7 @@ article {
    position: relative;
    background-color: white;
    background: url("../images/DominguezAndrew_2017012401591_squarespace.jpg");
-   background-attachment: fixed; 
+   background-attachment: fixed;
    background-size: cover;
 }
 .container2 {
@@ -46,10 +46,10 @@ article {
 	color: green;
 	font-weight: bold;
 }
-  
+
 
 a:link {
-  color: #6d6d6d; 
+  color: #6d6d6d;
   text-decoration: none;
 }
 
@@ -61,10 +61,12 @@ a:visited {
 
 a:active {
   color: #4cff00; }
-  
+
+hr .menu {
+  border: 1px solid #000000; }
+
 footer {
-	font-size: 14px;
-	text-align: center;
-	text-decoration: none;
-	color: #9e9e9e;
-}
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #9e9e9e; }
