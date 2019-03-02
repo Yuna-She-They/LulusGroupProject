@@ -36,7 +36,7 @@ article {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
-  background-color: #000000;
+  background-color: #FFFFFF;
   min-height: 100vh; }
 
 .menuname {
@@ -75,6 +75,10 @@ hr .menu {
   background: #125688;
   color: white; }
 
+/* todo: add nut free,
+    soy free
+    and glutenless styles
+*/
 footer {
   font-size: 14px;
   text-align: center;

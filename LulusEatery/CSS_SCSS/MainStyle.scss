@@ -53,7 +53,7 @@ article {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    background-color:$text-color;
+    background-color:$backgroud-color;
     min-height:100vh;
 }
 
@@ -108,6 +108,12 @@ hr {
     background:#125688;
     color:white;
 }
+
+/* todo: add nut free,
+    soy free
+    and glutenless styles
+*/
+
 .nf {
 
 }
@@ -119,6 +125,7 @@ hr {
 .gl {
 
 }
+
 footer {
     font-size:14px;
     text-align:center;
