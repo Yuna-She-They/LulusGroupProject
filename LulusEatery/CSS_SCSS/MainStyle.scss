@@ -60,6 +60,7 @@ article {
 .menuname {
     color:green;
     font-weight:bold;
+    padding-top:1em;
 }
 
 
@@ -114,16 +115,18 @@ hr {
     and glutenless styles
 */
 
-.nf {
+//Sass Mix-in to re-use diffrent styles thoughout the rest of the sytlesheet
 
+.nf {
+    color:red;
 }
 
 .sf {
-
+    color:red;
 }
 
 .gl {
-
+    color:red;
 }
 
 footer {
