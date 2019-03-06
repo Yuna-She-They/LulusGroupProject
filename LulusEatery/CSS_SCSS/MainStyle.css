@@ -41,7 +41,27 @@ article {
 
 .menuname {
   color: green;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-top:1em;  }
+
+.menukey {
+  text-align: right;
+}  
+  
+.gl {
+  color: #c284c9;
+  font-weight: bold;
+}
+
+.sf {
+  color: #5eb2d6;
+  font-weight: bold;
+}
+
+.nf {
+  color: #ffd468;
+  font-weight: bold;
+}
 
 a:link {
   color: #6d6d6d;
@@ -55,6 +75,7 @@ a:active {
 
 hr .menu {
   border: 1px solid #000000; }
+
 
 .fa {
   padding: 20px;
