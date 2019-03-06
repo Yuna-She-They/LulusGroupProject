@@ -3,7 +3,7 @@ html {
   font-size: 16px; }
 
 a, article, body, div, figure, footer, header, h1, audio,
-h2, h3, img, li, nav, p, section, ul, fieldset, form, input, label, legend, textarea {
+h2, h3, img, li, nav, p, section, ul, fieldset, form, input, label, legend, textarea, .pingpongimages {
   border: 0;
   padding: 0;
   margin: 0; }
@@ -61,6 +61,15 @@ article {
 .nf {
   color: #ffd468;
   font-weight: bold;
+}
+
+.pingpongimages {
+	padding-top: 1em;
+}
+
+.pingpongimages img {
+	width: 32%;
+	padding: 3px;
 }
 
 a:link {
