@@ -22,6 +22,10 @@ header {
 article {
   padding: 2em;
   color: #43a554; }
+  
+h2 {
+	padding-bottom: 1em;
+}
 
 .container {
   /* max-width 1920px*/
@@ -41,12 +45,15 @@ article {
 
 .menuname {
   color: green;
-  font-weight: bold;
-  padding-top:1em;  }
+  font-weight: bold;  }
 
 .menukey {
   text-align: right;
 }  
+
+.menudesc {
+	padding-bottom:1em;
+}
   
 .gl {
   color: #c284c9;
