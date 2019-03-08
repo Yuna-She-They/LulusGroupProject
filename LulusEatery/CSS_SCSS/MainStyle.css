@@ -32,7 +32,7 @@ h2 {
   margin: 0 auto;
   position: relative;
   background-color: #FFFFFF;
-  background: url("../images/DominguezAndrew_2017012401591_squarespace.jpg");
+  background: url("../images/bg.jpg");
   background-attachment: fixed;
   background-size: cover; }
 
@@ -61,7 +61,7 @@ h2 {
 }
 
 .sf {
-  color: #5eb2d6;
+  color: #d15b57;
   font-weight: bold;
 }
 
