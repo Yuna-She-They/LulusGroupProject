@@ -1,0 +1,23 @@
+.menuname {
+  color: green;
+  font-weight: bold; }
+
+.menukey {
+  text-align: right; }
+
+.menudesc {
+  padding-bottom: 1em; }
+
+.gl {
+  color: #C284C9;
+  font-weight: bold; }
+
+.sf {
+  color: #5EB2D6;
+  font-weight: bold; }
+
+.nf {
+  color: #FFD468;
+  font-weight: bold; }
+
+/*# sourceMappingURL=Menu.css.map */
