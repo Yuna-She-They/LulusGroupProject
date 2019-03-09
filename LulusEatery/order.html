@@ -24,7 +24,27 @@
                 </nav>
             </header>
             <article id="order">
-                to be implemented
+				<p>
+				Order food to be picked up at Lulu's! Select the menu items you would like to order:
+				</p>
+				<br>
+				<div class="ordertitle">
+					Starters, Salads, & Sides
+				</div>
+				<div class="orderitem">
+					Buffalo Cauliflower Bites <span class="orderprice">$5.95</span>
+				</div>
+				<div class="orderitem">
+					Kale Salad <span class="orderprice">$6.95</span>
+				</div>
+				<br>
+					Actually c:forEach var="item" items="${items}"
+					<BR>
+					drop down for quantity, radio button, ${item.itemName} ${item.itemPrice}
+				</br>
+				<div class="button">
+					Review cart
+				</div>
             </article>
             <footer id="info">
                 <a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" target="_blank">3201 S Grand Ave St. Louis, MO 63118</a><br />

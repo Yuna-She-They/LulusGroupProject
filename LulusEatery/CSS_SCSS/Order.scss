@@ -1,0 +1,24 @@
+$buttonHoverColor: #FF6A00;
+.ordertitle {
+	font-weight: bold;
+	color: green;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.button {
+	border: 1px solid green;
+	text-align: center;
+	font-weight: bold;
+	color: green;
+	display: inline-block;
+	padding: 5px;
+	border-radius:4px;
+	margin-top: 1em;
+}
+
+.button:hover {
+	color: $buttonHoverColor;
+	border: 1px solid $buttonHoverColor;
+}
+
