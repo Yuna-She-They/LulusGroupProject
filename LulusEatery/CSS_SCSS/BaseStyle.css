@@ -42,7 +42,7 @@ a:visited {
 
 /* Possibly make the border thicker I'll have to play around with it */
 hr .menu {
-  border: 1px solid #000000; }
+  border: 5px solid #000000; }
 
 footer {
   font-size: 14px;
