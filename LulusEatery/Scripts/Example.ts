@@ -25,7 +25,8 @@ let list: number[] = [1, 2, 3];
 let list: Array<number> = [1,2,3];
 
 //Typescript has Enumerations
-enum Color {
+enum Color
+{
 	Red,
 	Green,
 	Blue
@@ -33,7 +34,8 @@ enum Color {
 let c: Color = Color.Green;
 
 // void is used in the speical case of a function returning nothing
-function bigHorribleAlert(): void {
+function bigHorribleAlert(): void
+{
 	alert("I'm a litle annoying box!");
 }
 
@@ -52,7 +54,8 @@ let f4 = (i: number) => {return i*i;}
 let f5 = (i: number) => i * i;
 
 //typescript also has interfaces,
-interface Person {
+interface Person
+{
 	name: string;
 	//optional properties marked with a "?"
 	age?: number;
@@ -69,29 +72,34 @@ let validPerson: Person = {name: "Bobby",age: 42,move: () => {}};
 //XXX let invalidPerson: Person = {name: "Bobby",age: true};
 
 //interfaces can also describe a function type
-interface SearchFunc {
+interface SearchFunc
+{
 	(source: string, subString: string): boolean;
 }
 //onlay the parameters' types are important, names are not important
 let mySearch: SearchFunc;
-mySearch = function (src: string, sub: string) {
+mySearch = function (src: string, sub: string)
+{
 	return src.search(sub) != -1;
 }
 
 //Classes Members are public by default
-class Point {
+class Point
+{
 	//properties
 	x: number;
 
 	//constructor
 	//public private keywors in this context will generate the boiler plate code for the property
-	constructor(x: number, public y: number = 0) {
+	constructor(x: number, public y: number = 0)
+	{
 		// the = 0 tells that y defaults to 0
 		this.x = x;
 	}
 
 	//Functions
-	dist() {
+	dist()
+	{
 		return Math.sqrt((this.x * this.x)+(this.y * this.y));
 	}
 
@@ -101,7 +109,8 @@ class Point {
 
 //Classes can be explicitly marked as implmenting an interface,
 //any missing properties will cause an error at compile time
-class PointPerson implements Person {
+class PointPerson implements Person
+{
 	name: string;
 	move() {};
 }
@@ -110,13 +119,16 @@ let p1 = new Point(10,20);
 let p2 = new Point(25); // y will be 0
 
 // Inhertance
-class Point3D extends Point {
-	constructor(x: number, y:number, z: number =0) {
+class Point3D extends Point
+{
+	constructor(x: number, y:number, z: number =0)
+	{
 		super(x,y);
 	}
 
 	//overwrite
-	dist() {
+	dist()
+	{
 		let d = super.dist();
 		return Math.sqrt(d*d + this.z * this.z);
 	}
@@ -124,11 +136,14 @@ class Point3D extends Point {
 
 //Modules "." can be used as Seprator for sub modules
 
-module Geometry {
-	export class Square {
+module Geometry
+{
+	export class Square
+	{
 		constructor(public sideLength: number = 0) { }
 		
-		area() {
+		area()
+		{
 			return Math.pow(this.sideLength,2);
 		}
 	}
@@ -143,18 +158,21 @@ import G = Geometry;
 let s2 = new G.Square(10);
 
 //Generic Classes
-class Tuple<T1,T2> {
+class Tuple<T1,T2>
+{
 	constructor(public item1: T1, public item2: T2) {}
 }
 
 //interfaces
-interface Pair<T> {
+interface Pair<T>
+{
 	item1: T;
 	item2: T;
 }
 
 //and functions
-let pairToTuple = function<T>(p: Pair<T>) {
+let pairToTuple = function<T>(p: Pair<T>)
+{
 	return new Tuple(p.item1,p.item2);
 };
 

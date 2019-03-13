@@ -1,3 +1,6 @@
+
+-- vim: set syntax=mysql
+
 DROP DATABASE IF EXISTS lulus;
 CREATE DATABASE lulus;
 USE lulus;
@@ -25,5 +28,3 @@ VALUES ('Dallas', 'Wyciskalla', 3145551212,
 INSERT INTO invoice (Food, Price) 
 VALUES ('Loaded Nacho Tots', '6.95' ),
 ('Buffalo Cauliflower Bites, Buffalo Blue Burgerx2', '19.85' );
-
-
