@@ -12,6 +12,10 @@ hr .menu {
 .menudesc {
 	padding-bottom:1em;
 }
+
+.menupdf {
+	text-align: right;
+}
   
 .gl {
   color: #c284c9;
