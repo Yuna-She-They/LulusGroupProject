@@ -7,7 +7,6 @@
 		<meta name="author" content="" />
 		<link rel="stylesheet" href="./CSS_SCSS/BaseStyle.css" />
 		<!-- Possibly add icon stylesheet to this page see other pages for link -->
-
 		<title>Contact Us</title>
 	</head>
 	<body id="page-top">
@@ -23,8 +22,16 @@
 						<a href="#page-top">Contact Us</a>
 					</nav>
 				</header>
-				<form id="frmContact_us">
-
+				<form id="contact" action="" method="post">
+					<fieldset>
+						<input placeholder="Your name" type="text" tabindex="1" required autofocus />	
+					</fieldset>
+					<fieldset>
+						<input placeholder="Your email Address" type="email" tabindex="2" required />
+					</fieldset>
+					<fieldset>
+						<button name="submit" type="submit" id="contact-submit">Submit</button>
+					</fieldset>
 				</form>
 				<footer id="info">
 					<!-- Copy and Pst Google Maps Editor here, not worth the time in vi / vim -->
