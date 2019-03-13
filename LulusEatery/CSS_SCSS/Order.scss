@@ -1,12 +1,14 @@
 $buttonHoverColor: #FF6A00;
-.ordertitle {
+.ordertitle
+{
 	font-weight: bold;
 	color: green;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
 
-.button {
+.button
+{
 	border: 1px solid green;
 	text-align: center;
 	font-weight: bold;
@@ -17,7 +19,8 @@ $buttonHoverColor: #FF6A00;
 	margin-top: 1em;
 }
 
-.button:hover {
+.button:hover
+{
 	color: $buttonHoverColor;
 	border: 1px solid $buttonHoverColor;
 }

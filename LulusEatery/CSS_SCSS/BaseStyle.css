@@ -3,86 +3,119 @@ BaseStyle.sass
 To Replace MainStyle.css
 */
 /* Reset Styles */
-html {
-  font-size: 16px; }
+html
+{
+  font-size: 16px;
+}
 
 a, article, body, div, footer, header, h1, audio, h2, h3,
 img, li, nav, p, section, ul, fieldset, form, input,
-label, legend, textarea {
+label, legend, textarea
+{
   border: 0;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
-body {
+body
+{
   background-color: #FFFFFF;
   color: #000000;
-  font-family: Verdana,Arial,sans-serif; }
+  font-family: Verdana,Arial,sans-serif;
+}
 
-header {
+header
+{
   padding-top: 2em;
   text-align: center;
-  color: #43A554; }
+  color: #43A554;
+}
 
-h2 {
-  padding-bottom: 15px; }
+h2
+{
+  padding-bottom: 15px;
+}
 
-a:link {
+a:link
+{
   color: #6D6D6D;
   text-decoration: none;
-  /* hyperlinks are usally underlined do we want to change this? */ }
+  /* hyperlinks are usally underlined do we want to change this? */
+}
 
-a:hover {
-  color: #FF6A00; }
+a:hover
+{
+  color: #FF6A00;
+}
 
-a:active {
-  color: #4CFF00; }
+a:active
+{
+  color: #4CFF00;
+}
 
-a:visited {
-  color: #6D6D6D; }
+a:visited
+{
+  color: #6D6D6D;
+}
 
 /* Possibly make the border thicker I'll have to play around with it */
-hr .menu {
-  border: 5px solid #000000; }
+hr
+{
+  border: 5px solid #000000;
+}
 
-footer {
+footer
+{
   font-size: 14px;
   text-align: center;
   text-decoration: none;
-  color: #9E9E9E; }
+  color: #9E9E9E;
+}
 
-.fa {
+.fa
+{
   padding: 20px;
   font-size: 30px;
   width: 50px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px; }
+  margin: 5px 2px;
+}
 
-.fa:hover {
-  opacity: 0.7; }
+.fa:hover
+{
+  opacity: 0.7;
+}
 
-.fa-facebook {
+.fa-facebook
+{
   background: #3B5998;
-  color: white; }
+  color: white;
+}
 
-.fa-instagram {
+.fa-instagram
+{
   background: #125688;
-  color: white; }
+  color: white;
+}
 
-.container {
+.container
+{
   /* Max-width 1920px */
   margin: 0 auto;
   position: relative;
   background-color: #FFFFFF;
   background: url("../images/Dominguex/Andrew_2017012401591_squarespace.jpg");
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .container2 {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
   background-color: #FFFFFF;
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
 /*# sourceMappingURL=BaseStyle.css.map */
