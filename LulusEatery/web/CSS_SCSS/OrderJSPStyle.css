@@ -1,0 +1,171 @@
+html {
+  font-size: 16px; }
+
+html, a, article, body, div, figure, footer, header, h1, audio,
+h2, h3, img, li, nav, p, section, ul, fieldset, input, label, legend, textarea, .pingpongimages {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Verdana,Arial,sans-serif; }
+
+header {
+  padding-top: 2em;
+  text-align: center;
+  color: #43a554;
+  font-size: 18px; }
+
+article {
+  padding: 2em;
+  color: #43a554; }
+  
+h2 {
+	padding-bottom: 15px;
+}
+
+
+.container {
+  /* max-width 1920px*/
+  margin: 0 auto;
+  position: relative;
+  background-color: #FFFFFF;
+  background: url("../images/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+
+.container2 {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #FFFFFF;
+  min-height: 100vh; }
+
+a:link {
+  color: #6d6d6d;
+  text-decoration: none; }
+
+a:hover {
+  color: #ff6a00; }
+
+a:active {
+  color: #4cff00; }
+
+.ordertitle {
+	font-weight: bold;
+	color: green;
+	padding-top: 5px;
+        padding-bottom: 5px;
+}
+
+/* removes mysterious white border for jsp */
+.containera {
+    position: relative;
+    margin-top: -22px;
+  background-color: #FFFFFF;
+  background: url("../images/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+
+.containera2 {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #FFFFFF;
+  min-height: 100vh; }
+
+
+.buttonholder {
+    text-align: center;
+}
+
+#submit {
+	border: 1px solid green;
+	text-align: center;
+        font-size: 16px;
+	font-weight: bold;
+	color: green;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 4px;
+	margin-top: 1em;
+        background-color: #dddddd;
+}
+
+#submit:hover {
+	color: #ff6a00;
+	border: 1px solid #ff6a00;
+}
+
+#submit:active {
+    color: #aa4801;
+    border: 1px solid #aa4801;
+    background-color: #898989;
+}
+
+input[type="radio"] {
+  margin-right: 4px;
+}
+
+.message {
+    color: #ff6a00;
+    margin-bottom: 6px;
+}
+
+input[type="checkbox"] {
+    float: right;
+    color: #43a554;
+}
+
+input[type="text"] {
+    border: 0px solid black;
+    width: 68px;
+    text-align: right;
+    padding-right:2px;
+    color: black;
+    font-size: 16px;
+}
+
+input[type="text"]:hover {
+    color: #3798dd;
+}
+
+.calendar {
+    padding-bottom: 1em;
+}
+
+.calendar input[type="text"] {
+    width: 80px;
+}
+
+table{
+    border:1px solid #c1c1c1;
+    border-collapse: collapse;
+    border-radius: 5px;
+    
+}
+
+td, tr {
+    border:1px solid #c1c1c1;
+    padding: 3px;
+}
+
+td {
+    white-space: nowrap
+}
+
+table td:last-child {
+    width: 100%;
+    text-align: right;
+}
+
+.tableheader {
+    color: #43a554;
+}
+
+.pickerholder {
+    color: black;
+}

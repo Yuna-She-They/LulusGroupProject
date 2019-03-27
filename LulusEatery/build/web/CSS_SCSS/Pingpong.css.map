@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACf,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,WAAW,EAAE,GAAG;EAEhB,mBAAI;IACH,KAAK,EAAE,GAAG;IACV,OAAO,EAAE,GAAG",
+"sources": ["Pingpong.scss"],
+"names": [],
+"file": "Pingpong.css"
+}
