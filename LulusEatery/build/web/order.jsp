@@ -1,7 +1,7 @@
 <%-- 
     Document   : order
     Created on : Mar 21, 2019, 5:54:04 PM
-    Author     : wmscottsimpsonjr
+    Author     : Scott Simpson
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
