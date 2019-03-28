@@ -64,7 +64,24 @@ a:hover {
 a:active {
   color: #4cff00; }
 
-
+li{
+   list-style: none;
+   padding-left: 10%;
+   padding-top: 10px;
+}
+li:before{
+   content: '';
+   display: inline-block;
+   height: 19px;   
+   width: 19px;
+   background-image: url("../images/bullet_broccoli.jpg");
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position: left center;
+   
+   
+  
+}
 
 
 .fa {
