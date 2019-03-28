@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="CSS_SCSS/CartStyle.css" />
         <!-- Adds an icon library to the website -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
         <title>Cart - Lulu's Local Eatery</title>
     </head>
 	<body id="page-top">

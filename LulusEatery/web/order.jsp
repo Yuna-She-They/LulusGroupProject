@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="CSS_SCSS/OrderJSPStyle.css" />
     <!-- Adds an icon library to the website -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
 
     <!--date only
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
