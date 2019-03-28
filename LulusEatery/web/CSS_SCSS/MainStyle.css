@@ -51,14 +51,20 @@ h2 {
   min-height: 100vh; }
 
 a:link {
-  color: #6d6d6d;
+  color: #898989;
   text-decoration: none; }
+
+a:visited {
+    color: #898989;
+}
 
 a:hover {
   color: #ff6a00; }
 
 a:active {
   color: #4cff00; }
+
+
 
 
 .fa {

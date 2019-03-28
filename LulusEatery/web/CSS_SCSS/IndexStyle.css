@@ -16,6 +16,12 @@
 	padding: 3px;
 }
 
-li a {
+li a, li a:visited {
     color: #43a554;
 }
+
+li a:hover {
+    color: #ff6a00; }
+
+li a:active {
+  color: #4cff00; }
