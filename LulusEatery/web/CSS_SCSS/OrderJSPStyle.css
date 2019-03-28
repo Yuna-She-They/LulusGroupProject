@@ -93,26 +93,24 @@ a:active {
 }
 
 #submit {
-	border: 1px solid green;
+	border: 0px;
 	text-align: center;
         font-size: 16px;
-	font-weight: bold;
-	color: green;
+	font-weight: 600;
+	color: #FFFFFF;
 	display: inline-block;
 	padding: 5px;
 	border-radius: 4px;
 	margin-top: 1em;
-        background-color: #dddddd;
+        background-color: #43a554;
 }
 
 #submit:hover {
-	color: #ff6a00;
-	border: 1px solid #ff6a00;
+	background-color: #ff6a00;
+	
 }
 
 #submit:active {
-    color: #aa4801;
-    border: 1px solid #aa4801;
     background-color: #898989;
 }
 
@@ -141,6 +139,10 @@ input[type="text"] {
 
 input[type="text"]:hover {
     color: #3798dd;
+}
+
+input[type="submit"] {
+    font-family: Montserrat,Verdana,Arial,sans-serif;
 }
 
 .calendar {
