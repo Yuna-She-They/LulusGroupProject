@@ -15,6 +15,10 @@ body {
   color: #000000;
   font-family: Verdana,Arial,sans-serif; }
 
+.logo {
+    padding-bottom: 5px;
+}
+
 header {
   padding-top: 2em;
   text-align: center;

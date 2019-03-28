@@ -73,7 +73,7 @@
 		<div class="containera">
 			<div class="containera2">
 				<header>
-					<div>Lulu's Local Eatery</div>
+					<div class="logo"><img src="images/logogreen.jpg" width="250"></div>
 					<nav>
 						<a href="index.html">Home</a> -
 						<a href="menu.html">Menu</a> -
