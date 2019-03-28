@@ -1,5 +1,9 @@
 /* author: Scott Simpson */
 
+.menulinks {
+    text-align: center;
+}
+
 hr .menu {
   border: 1px solid #000000; }
   
@@ -9,6 +13,8 @@ hr .menu {
 
 .menukey {
   text-align: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }  
 
 .menudesc {
