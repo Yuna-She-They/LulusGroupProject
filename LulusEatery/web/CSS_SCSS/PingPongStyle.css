@@ -2,9 +2,10 @@
 
 .pingpongimages {
 	padding-top: 1em;
+        font-size: 0;
 }
 
 .pingpongimages img {
 	width: 32%;
-	padding: 3px;
+	padding: 4px;
 }
