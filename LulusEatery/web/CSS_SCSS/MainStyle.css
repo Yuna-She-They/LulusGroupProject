@@ -27,7 +27,9 @@ header {
 
 article {
   margin: 2em;
-  color: #43a554; }
+  color: #43a554;
+    text-align: justify
+}
   
 h2 {
 	padding-bottom: 15px;
