@@ -99,11 +99,13 @@ li:before{
 
 .fa-facebook {
   background: #3B5998;
-  color: white; }
+  color: white;
+  border-radius: 4px;}
 
 .fa-instagram {
   background: #125688;
-  color: white; }
+  color: white; 
+  border-radius: 4px;}
 
 footer {
   font-size: 14px;
