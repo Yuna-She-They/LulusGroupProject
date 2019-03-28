@@ -6,3 +6,12 @@
 #helmet {
     text-align: center;
 }
+
+.gallery {
+	padding-top: 1em;
+}
+
+.gallery img {
+	width: 32%;
+	padding: 3px;
+}
