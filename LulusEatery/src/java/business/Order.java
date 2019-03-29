@@ -22,7 +22,7 @@ import org.hibernate.annotations.CascadeType;
  */
 
 @Entity
-@Table(name="stores")
+@Table(name="Order")
 public class Order {
     
     @Id

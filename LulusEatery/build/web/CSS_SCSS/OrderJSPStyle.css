@@ -135,6 +135,7 @@ input[type="text"] {
     padding-right:2px;
     color: black;
     font-size: 16px;
+    font-family: Montserrat,Verdana,Arial,sans-serif;
 }
 
 input[type="text"]:hover {

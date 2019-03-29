@@ -1,0 +1,59 @@
+
+/* 
+    Created on : Mar 28, 2019, 10:54:42 PM
+    Author     : wmscottsimpsonjr
+*/
+
+/* removes mysterious white border for jsp */
+.container {
+    position: relative;
+    margin-top: -22px;
+  background-color: #FFFFFF;
+  background: url("../images/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+
+.buttonholder {
+    text-align: center;
+}
+
+#submit {
+	border: 0px;
+	text-align: center;
+        font-size: 16px;
+	font-weight: 600;
+	color: #FFFFFF;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 4px;
+	margin-top: 1em;
+        background-color: #43a554;
+}
+
+#submit:hover {
+	background-color: #ff6a00;
+	
+}
+
+#submit:active {
+    background-color: #898989;
+}
+
+input[type="submit"] {
+    font-family: Montserrat,Verdana,Arial,sans-serif;
+}
+
+input[type="text"], input[type="password"]{
+    border: 1px solid black;
+    width: 90px;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Montserrat,Verdana,Arial,sans-serif;
+}
+
+.message {
+    color: #ff6a00;
+    margin-bottom: 6px;
+}

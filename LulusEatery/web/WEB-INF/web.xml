@@ -12,6 +12,18 @@
         <servlet-name>SubmitOrderServlet</servlet-name>
         <servlet-class>Servlets.SubmitOrderServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewOrderServlet</servlet-name>
+        <servlet-class>Servlets.ViewOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogonServlet</servlet-name>
+        <servlet-class>Servlets.LogonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewOrdersServlet</servlet-name>
+        <servlet-class>Servlets.ViewOrdersServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>OrderServlet</servlet-name>
         <url-pattern>/Order</url-pattern>
@@ -23,6 +35,18 @@
     <servlet-mapping>
         <servlet-name>SubmitOrderServlet</servlet-name>
         <url-pattern>/SubmitOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewOrderServlet</servlet-name>
+        <url-pattern>/ViewOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogonServlet</servlet-name>
+        <url-pattern>/Logon</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewOrdersServlet</servlet-name>
+        <url-pattern>/ViewOrders</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
