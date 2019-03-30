@@ -1,0 +1,50 @@
+/* 
+    Created on : Mar 29, 2019, 7:18:21 PM
+    Author     : wmscottsimpsonjr
+*/
+
+.buttonholder {
+    text-align: center;
+}
+
+#submit {
+	border: 0px;
+	text-align: center;
+        font-size: 16px;
+	font-weight: 600;
+	color: #FFFFFF;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 4px;
+	margin-top: 1em;
+        background-color: #43a554;
+}
+
+#submit:hover {
+	background-color: #ff6a00;
+	
+}
+
+#submit:active {
+    background-color: #898989;
+}
+
+input[type="submit"] {
+    font-family: Montserrat,Verdana,Arial,sans-serif;
+}
+
+input[type="text"], input[type="email"], textarea{
+    border: 1px solid black;
+    width: 300px;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Montserrat,Verdana,Arial,sans-serif;
+    margin: 3px;
+    margin-left:0px;
+}
+
+textarea {
+    width: 100%;
+}
