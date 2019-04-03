@@ -35,30 +35,29 @@
 					</nav>
 				</header>
 				<article id="vieworders">
-                                    <form action="ViewDetails" method="post">
-                                        <table>
-                                            <tr>
-                                                <th>Select</th>
-                                                <th>Order Date</th>
-                                                <th>Pickup Date</th>
-                                                <th>Order ID</th>
-                                                <th>Customer Name</th>
-                                                <th>Total Price</th>
-
-                                            </tr>
-                                            <c:forEach var="o" items="${orders}" >
-                                                <tr>
-                                                    <td><input type="radio" id="details"></td>
-                                                    <td>${o.date}</td>
-                                                    <td>${o.pdate}</td>
-                                                    <td>${o.orderID}</td>
-                                                    <td>${o.custname}</td>
-                                                    <td>${o.totalprice}</td>
-                                                </tr>
-                                            </c:forEach>
-                                        </table>
-                                        <input type="submit" id="submit" value="View Details">
-                                    </form>            
+					<form action="ViewDetails" method="post">
+						<table>
+							<tr>
+								<th>Select</th>
+								<th>Order Date</th>
+								<th>Pickup Date</th>
+								<th>Order ID</th>
+								<th>Customer Name</th>
+								<th>Total Price</th>
+							</tr>
+							<c:forEach var="o" items="${orders}" >
+							<tr>
+								<td><input type="radio" id="details" /></td>
+								<td>${o.date}</td>
+								<td>${o.pdate}</td>
+								<td>${o.orderID}</td>
+								<td>${o.custname}</td>
+								<td>${o.totalprice}</td>
+							</tr>
+							</c:forEach>
+						</table>
+						<input type="submit" id="submit" value="View Details" />
+					</form>            
 				</article>
 				<footer id="info">
 					<a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" target="_blank">3201 S Grand Ave St. Louis, MO 63118</a><br />

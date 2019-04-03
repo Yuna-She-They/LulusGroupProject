@@ -9,19 +9,19 @@
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <link rel="stylesheet" href="CSS_SCSS/MainStyle.css" />
-        <link rel="stylesheet" href="CSS_SCSS/OrderJSPStyle.css" />
-        <link rel="stylesheet" href="CSS_SCSS/CartStyle.css" />
-        <!-- Adds an icon library to the website -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
-        <title>Cart - Lulu's Local Eatery</title>
-    </head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<link rel="stylesheet" href="CSS_SCSS/MainStyle.css" />
+		<link rel="stylesheet" href="CSS_SCSS/OrderJSPStyle.css" />
+		<link rel="stylesheet" href="CSS_SCSS/CartStyle.css" />
+		<!-- Adds an icon library to the website -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
+		<title>Cart - Lulu's Local Eatery</title>
+	</head>
 	<body id="page-top">
 		<div class="container">
 			<div class="container2">
@@ -37,38 +37,37 @@
 				</header>
 				<article id="cart">
 					<h1>Shopping Cart</h1>
-                                        <form action="SubmitOrder" method="post">
-                                            <table>
-                                                <tr>
-                                                    <td><span class=tableheader>Delete</span></td>
-                                                    <td><span class=tableheader>Quantity</span></td>
-                                                    <td><span class=tableheader>Name</span></td>
-                                                    <td><span class=tableheader>Price</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="${item.item.name}" value="${item.item.name}"></td>
-                                                    <td><input type="text" name="quantityTest" id="quantityTest" value="1"/></td>
-                                                    <td>Test</td>
-                                                    <td><fmt:formatNumber value="5.95" type="currency"/></td>
-                                                </tr>
-                                                <c:forEach var="item" items="${itemlist}">
-                                                    <tr>
-                                                        <td><input type="checkbox" name="${item.item.name}" value="${item.item.name}"></td>
-                                                        <td><input type="text" name="quantity${item.item.name}" id="quantity${item.item.name}" value="${item.quantity}"/></td>
-                                                        <td>${item.item.name}</td>
-                                                        <td><fmt:formatNumber value="${item.item.price}" type="currency"/></td>
-                                                    </tr>
-                                                </c:forEach>
-                                            </table>
-                                            <div class="buttonholder">
-                                                <!--just go back to order.jsp-->
-                                                <input type="submit" id="submit" name="back" value="Add More">
-                                                <!--update itemlist-->
-                                                <input type="submit" id="submit" name="update" value="Update">
-						<input type="submit" id="submit" name="place" value="Place Order">
-                                            </div>
-                                        </form>
-                                                
+					<form action="SubmitOrder" method="post">
+						<table>
+							<tr>
+								<td><span class=tableheader>Delete</span></td>
+								<td><span class=tableheader>Quantity</span></td>
+								<td><span class=tableheader>Name</span></td>
+								<td><span class=tableheader>Price</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="${item.item.name}" value="${item.item.name}"></td>
+								<td><input type="text" name="quantityTest" id="quantityTest" value="1"/></td>
+								<td>Test</td>
+								<td><fmt:formatNumber value="5.95" type="currency"/></td>
+							</tr>
+							<c:forEach var="item" items="${itemlist}">
+								<tr>
+									<td><input type="checkbox" name="${item.item.name}" value="${item.item.name}"></td>
+									<td><input type="text" name="quantity${item.item.name}" id="quantity${item.item.name}" value="${item.quantity}"/></td>
+									<td>${item.item.name}</td>
+									<td><fmt:formatNumber value="${item.item.price}" type="currency"/></td>
+								</tr>
+							</c:forEach>
+						</table>
+						<div class="buttonholder">
+							<!--just go back to order.jsp-->
+							<input type="submit" id="submit" name="back" value="Add More" />
+							<!--update itemlist-->
+							<input type="submit" id="submit" name="update" value="Update" />
+							<input type="submit" id="submit" name="place" value="Place Order" />
+						</div>
+					</form>
 				</article>
 				<footer id="info">
 					<a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" target="_blank">3201 S Grand Ave St. Louis, MO 63118</a><br />
