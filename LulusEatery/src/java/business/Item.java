@@ -12,14 +12,14 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name="Items")
+@Table(name="foods")
 public class Item {
     
     @Id
-    @Column(name="ItemID")
+    @Column(name="FoodID")
     private int itemID;
     
-    @Column(name="Name")
+    @Column(name="FoodName")
     private String name;
     
     @Column(name="Price")

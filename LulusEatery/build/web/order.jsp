@@ -129,34 +129,8 @@
                                                     <td><span class=tableheader>Name</span></td>
                                                     <td><span class=tableheader>Price</span></td>
                                                 </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="Name price" value="Name"></td>
-                                                    <td><input type="text" name="quantity" id="quantity" value="1"/></td>
-                                                    <td>Buffalo Cauliflower Bites</td>
-                                                    <td>$5.95</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="Name price" value="Name"></td>
-                                                    <td><input type="text" name="quantity" id="quantity" value="1"/></td>
-                                                    <td>Kale Salad</td>
-                                                    <td>$6.95</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="Name price" value="Name"></td>
-                                                    <td><input type="text" name="quantity" id="quantity" value="1"/></td>
-                                                    <td>Kale and Brussels Sprouts Caesar Salad</td>
-                                                    <td>$8.95</td>
-                                                </tr>
-                                            </table>
-                                            <table>
-                                                <tr>
-                                                    <td><span class=tableheader>Add</span></td>
-                                                    <td><span class=tableheader>Quantity</span></td>
-                                                    <td><span class=tableheader>Name</span></td>
-                                                    <td><span class=tableheader>Price</span></td>
-                                                </tr>
                                             <c:forEach var="item" items="${items}">
-                                                <c:if test="item.category == side">
+                                                <c:if test="${item.category == 'Starter'}">
                                                     
                                                         <tr>
                                                             <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
@@ -170,7 +144,7 @@
                                             </table>
                                             <br />
                                             <div class="ordertitle">
-                                                    Wraps &amp; Sandwiches
+                                                    Burgers &amp; Wraps
                                             </div>
                                             <table>
                                                 <tr>
@@ -180,7 +154,7 @@
                                                     <td><span class=tableheader>Price</span></td>
                                                 </tr>
                                             <c:forEach var="item" items="${items}">
-                                                <c:if test="item.category == wrap">
+                                                <c:if test="${item.category == 'Burger'}">
                                                     
                                                         <tr>
                                                             <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
@@ -194,7 +168,7 @@
                                             </table>
                                             <br>
                                             <div class="ordertitle">
-                                                    Entrees
+                                                    Tacos &amp; Burritos
                                             </div>
                                             <table>
                                                 <tr>
@@ -204,7 +178,31 @@
                                                     <td><span class=tableheader>Price</span></td>
                                                 </tr>
                                             <c:forEach var="item" items="${items}">
-                                                <c:if test="item.category == entree">
+                                                <c:if test="${item.category == 'Tacos'}">
+                                                    
+                                                        <tr>
+                                                            <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
+                                                            <td><input type="text" name="quantity${item.name}" id="quantity${item.name}" value="1"/></td>
+                                                            <td>${item.name}</td>
+                                                            <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
+                                                        </tr>
+                                                    
+                                                </c:if>
+                                            </c:forEach>
+                                            </table>
+                                            <br>
+                                            <div class="ordertitle">
+                                                    Entree Bowls
+                                            </div>
+                                            <table>
+                                                <tr>
+                                                    <td><span class=tableheader>Add</span></td>
+                                                    <td><span class=tableheader>Quantity</span></td>
+                                                    <td><span class=tableheader>Name</span></td>
+                                                    <td><span class=tableheader>Price</span></td>
+                                                </tr>
+                                            <c:forEach var="item" items="${items}">
+                                                <c:if test="${item.category == 'Bowl'}">
                                                     
                                                         <tr>
                                                             <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
@@ -228,7 +226,7 @@
                                                     <td><span class=tableheader>Price</span></td>
                                                 </tr>
                                             <c:forEach var="item" items="${items}">
-                                                <c:if test="item.category == kids">
+                                                <c:if test="${item.category == 'Kids'}">
                                                     
                                                         <tr>
                                                             <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>

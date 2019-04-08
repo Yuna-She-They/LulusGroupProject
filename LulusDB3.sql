@@ -21,23 +21,26 @@ CREATE TABLE customer (
 
 CREATE TABLE invoice (
     InvoiceID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	CustomerID int,
     InvoiceDate timestamp,
     FoodReady datetime  -- when the customer schedules a pick up --   
     );
 
 CREATE TABLE food_list (
+	ID BIGINT NOT NULL AUTO_INCREMENT,
     InvoiceID int references invoice(InvoiceID),
     FoodID int references foods(FoodID),
-    CustomerID int references customer(CustomerID),
-    Quantity int
+    Quantity int,
+	
+	Primary Key (ID)
     );
 
-INSERT INTO customer
-VALUES (1,'Dallas', 'Wyciskalla', 3145551212, 
+INSERT INTO customer (Fname, Lname, Phone, Email, CCnumber) 
+VALUES ('Dallas', 'Wyciskalla', 3145551212, 
 'd@system.com', 1234123412341234);
 
-select *
-from foods;
+INSERT INTO foods (FoodName, Price, Category) 
+VALUES ('Buffalo Cauliflower Bites', 5.95, Sides);
 
 
 

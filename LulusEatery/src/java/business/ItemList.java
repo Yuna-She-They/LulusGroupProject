@@ -17,7 +17,7 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name="ItemList")
+@Table(name="food_list")
 public class ItemList {
     
     @Id
@@ -25,14 +25,14 @@ public class ItemList {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
     
-    @Column(name="OrderID")
+    @Column(name="InvoiceID")
     private int orderid;
+    
+    @Column(name="FoodID")
+    private int itemID;
     
     @Column(name="Quantity")
     private int quantity;
-    
-    @Column(name="ItemID")
-    private int itemID;
     
     @OneToOne (fetch=FetchType.EAGER)
     @JoinColumn (name="itemID",insertable=false,updatable=false)

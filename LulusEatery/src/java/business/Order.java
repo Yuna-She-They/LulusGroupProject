@@ -22,26 +22,23 @@ import org.hibernate.annotations.CascadeType;
  */
 
 @Entity
-@Table(name="Order")
+@Table(name="invoice")
 public class Order {
     
     @Id
-    @Column(name="OrderID")
+    @Column(name="InvoiceID")
     private int orderID;
     
     @Column(name="CustomerID")
     private int customerID;
     
-    @Column(name="OrderDate")
+    @Column(name="InvoiceDate")
     @Temporal(TemporalType.DATE)
     private Date orderdate;
     
-    @Column(name="PickupDate")
+    @Column(name="FoodReady")
     @Temporal(TemporalType.DATE)
     private Date pickupdate;
-    
-    @Column(name="TotalPrice")
-    private double totalprice;
     
     @OneToMany(fetch=FetchType.EAGER)
     @JoinColumn(name="orderID")
