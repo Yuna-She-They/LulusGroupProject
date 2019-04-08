@@ -34,21 +34,20 @@
 				</header>
 				<article id="logon">
 					<h1>Logon</h1>
-                                        <form action="Logon" method="post">
-                                            <table>
-                                                <tr>
-                                                    <td>User ID: </td>
-                                                    <td><input type="text" name="userid" id="userid" value=""></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Password: </td>
-                                                    <td><input type="password" name="password" id="password"></td>
-                                                </tr>                                               
-                                            </table>
-                                            <input type="submit" id="submit" value="Logon">
-                                        </form>
-                                        ${msg}
-                                                
+					<form action="Logon" method="post">
+						<table>
+							<tr>
+								<td>User ID: </td>
+								<td><input type="text" name="userid" id="userid" value="" /></td>
+							</tr>
+							<tr>
+								<td>Password: </td>
+								<td><input type="password" name="password" id="password"></td>
+							</tr>
+						</table>
+						<input type="submit" id="submit" value="Logon">
+					</form>
+					${msg}
 				</article>
 				<footer id="info">
 					<a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" target="_blank">3201 S Grand Ave St. Louis, MO 63118</a><br />
