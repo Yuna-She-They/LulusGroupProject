@@ -1,0 +1,9 @@
+/* 
+    Created on : Apr 14, 2019, 9:18:33 AM
+    Author     : wmscottsimpsonjr
+*/
+
+table td:last-child {
+    width: auto;
+    text-align: left;
+}

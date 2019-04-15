@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ViewOrders
-    Created on : Mar 28, 2019, 11:02:00 PM
+    Document   : viewdetails
+    Created on : Apr 15, 2019, 9:57:30 AM
     Author     : wmscottsimpsonjr
 --%>
 
@@ -38,29 +38,39 @@
                                     <div class="message">
                                         ${msg}
                                     </div>
-					<form action="ViewDetails" method="post">
-						<table>
-							<tr>
-                                                                <td><span class=tableheader>Select</span></td>
-								<td><span class=tableheader>Order Date</span></td>
-								<td><span class=tableheader>Pickup Date</span></td>
-								<td><span class=tableheader>Order ID</span></td>
-								<td><span class=tableheader>Customer ID</span></td>
-								<td><span class=tableheader>Total Price</span></td>
-							</tr>
-							<c:forEach var="i" items="${invoices}" >
-							<tr>
-								<td><input type="radio" name="invoiceid" value="${i.invoiceID}"/></td>
-								<td>${i.invoicedate}</td>
-								<td>${i.pickupdate}</td>
-								<td>${i.invoiceID}</td>
-								<td>${i.customerID}</td>
-								<td>i.totalprice</td>
-							</tr>
-							</c:forEach>
-						</table>
-						<input type="submit" id="submit" value="View Details" />
-					</form>            
+                                    <table>
+                                        <tr>
+                                            <td><span class=tableheader>Order Date</span></td>
+                                            <td><span class=tableheader>Pickup Date</span></td>
+                                            <td><span class=tableheader>Order ID</span></td>
+                                            <td><span class=tableheader>Customer ID</span></td>
+                                            <td><span class=tableheader>Total Price</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>${invoiceview.invoicedate}</td>
+                                            <td>${invoiceview.pickupdate}</td>
+                                            <td>${invoiceview.invoiceID}</td>
+                                            <td>${invoiceview.customerID}</td>
+                                            <td>price</td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <table>
+                                        <tr>
+                                            <td><span class=tableheader>ID</span></td>
+                                            <td><span class=tableheader>Name</span></t>
+                                            <td><span class=tableheader>Quantity</span></td>
+                                            <td><span class=tableheader>Price</span></td>
+                                        </tr>
+                                        <c:forEach var="item" items="${invoiceview.itemlist}">
+                                            <tr>
+                                                <td>${item.itemID}</td>
+                                                <td>${item.item.name}</td>
+                                                <td>${item.quantity}</td>
+                                                <td>@${item.item.price}</td>
+                                            </tr>
+                                        </c:forEach>
+                                    </table>            
 				</article>
 				<footer id="info">
 					<a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" target="_blank">3201 S Grand Ave St. Louis, MO 63118</a><br />

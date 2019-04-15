@@ -10,31 +10,31 @@ import org.hibernate.SessionFactory;
  *
  * @author wmscottsimpsonjr
  */
-public class OrderDB {
-    public static List<Order> getOrders() {
+public class InvoiceDB {
+    public static List<Invoice> getInvoices() {
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = null;
-        List<Order> orders = null;
+        List<Invoice> invoices = null;
         try {
             session = sessionFactory.openSession();
             String qS = "from Invoice order by InvoiceDate";
             Query q = session.createQuery(qS);
-            orders = q.list();
+            invoices = q.list();
         } catch (Exception e) {
-            orders = null;
+            invoices = null;
         } finally {
             session.close();
         }
-        return orders;
+        return invoices;
     }
-    public static boolean addOrder (Order order){
+    public static boolean addInvoice (Invoice invoice){
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = null;
         boolean dbstat = false;
         try {
             session = sessionFactory.openSession();
             session.beginTransaction();
-            session.save(order);
+            session.save(invoice);
             session.getTransaction().commit();
             dbstat = true;
         } catch (Exception e) {

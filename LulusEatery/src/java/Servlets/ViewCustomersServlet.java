@@ -1,8 +1,15 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Servlets;
 
+import business.Customer;
+import business.CustomerDB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,17 +20,35 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author wmscottsimpsonjr
  */
-public class LogonServlet extends HttpServlet {
+public class ViewCustomersServlet extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String URL = "/Logon.jsp", msg="";
+        String URL = "/customers.jsp", msg="";
         
-        if (request.getParameter("userid").equals("wmscottsimpsonjr") && request.getParameter("password").equals("password")) {
-            URL = "/SelectOrders.jsp";
-        } else {
-            msg = "Logon credentials invalid.";
+        List<Customer> customers;
+        try {
+            customers = CustomerDB.getCustomers();
+            if (customers != null && customers.size() > 0) {
+                request.getSession().setAttribute("customers", customers);
+            } else {
+                msg = "No items read from file<br>";
+            }
+        } catch (Exception e) {
+            msg = "Servlet error: " + e.getMessage() + "<br>";
         }
+        
+        
         
         request.setAttribute("msg", msg);
         RequestDispatcher disp = getServletContext().getRequestDispatcher(URL);

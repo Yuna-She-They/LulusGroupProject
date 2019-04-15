@@ -38,7 +38,7 @@
 						<table>
 							<tr>
 								<td>User ID: </td>
-								<td><input type="text" name="userid" id="userid" value="" /></td>
+								<td><input type="text" name="userid" id="userid" value="" autofocus/></td>
 							</tr>
 							<tr>
 								<td>Password: </td>

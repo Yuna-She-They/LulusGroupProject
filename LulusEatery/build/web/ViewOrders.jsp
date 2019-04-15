@@ -15,15 +15,15 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <link rel="stylesheet" href="CSS_SCSS/MainStyle.css" />
-        <link rel="stylesheet" href="CSS_SCSS/ViewOrderStyle.css" />
+        <link rel="stylesheet" href="CSS_SCSS/OrderJSPStyle.css" />
         <!-- Adds an icon library to the website -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
         <title>Cart - Lulu's Local Eatery</title>
     </head>
 	<body id="page-top">
-		<div class="container">
-			<div class="container2">
+		<div class="containera">
+			<div class="containera2">
 				<header>
 					<div class="logo"><img src="images/logogreen.jpg" width="250"></div>
 					<nav>
@@ -35,24 +35,27 @@
 					</nav>
 				</header>
 				<article id="vieworders">
+                                    <div class="message">
+                                        ${msg}
+                                    </div>
 					<form action="ViewDetails" method="post">
 						<table>
 							<tr>
-								<th>Select</th>
-								<th>Order Date</th>
-								<th>Pickup Date</th>
-								<th>Order ID</th>
-								<th>Customer Name</th>
-								<th>Total Price</th>
+                                                                <td><span class=tableheader>Select</span></td>
+								<td><span class=tableheader>Order Date</span></td>
+								<td><span class=tableheader>Pickup Date</span></td>
+								<td><span class=tableheader>Order ID</span></td>
+								<td><span class=tableheader>Customer ID</span></td>
+								<td><span class=tableheader>Total Price</span></td>
 							</tr>
-							<c:forEach var="o" items="${orders}" >
+							<c:forEach var="i" items="${invoices}" >
 							<tr>
-								<td><input type="radio" id="details" /></td>
-								<td>${o.date}</td>
-								<td>${o.pdate}</td>
-								<td>${o.orderID}</td>
-								<td>${o.custname}</td>
-								<td>${o.totalprice}</td>
+								<td><input type="radio" name="invoiceid" value="${i.invoiceID}"/></td>
+								<td>${i.invoicedate}</td>
+								<td>${i.pickupdate}</td>
+								<td>${i.invoiceID}</td>
+								<td>${i.customerID}</td>
+								<td>i.totalprice</td>
 							</tr>
 							</c:forEach>
 						</table>

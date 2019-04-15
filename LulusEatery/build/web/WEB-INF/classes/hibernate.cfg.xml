@@ -49,6 +49,6 @@ Contributor(s):
     <mapping class="business.Item"/>
     <mapping class="business.ItemList"/>
     <mapping class="business.Customer"/>
-    <mapping class="business.Order"/>
+    <mapping class="business.Invoice"/>
   </session-factory>
 </hibernate-configuration>

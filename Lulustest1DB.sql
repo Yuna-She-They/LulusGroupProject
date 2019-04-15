@@ -1,6 +1,6 @@
-drop DATABASE lulus;
-create database lulus;
-use lulus;
+drop DATABASE lulustest2;
+create database lulustest2;
+use lulustest1;
 
 create table foods (
 	FoodId int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -20,10 +20,12 @@ CREATE TABLE customer (
 );
 
 CREATE TABLE invoice (
-    InvoiceID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    InvoiceID int NOT NULL AUTO_INCREMENT,
 	CustomerID int,
-    InvoiceDate timestamp,
-    FoodReady datetime  -- when the customer schedules a pick up --   
+    InvoiceDate datetime,
+    FoodReady datetime,
+	
+	PRIMARY KEY (InvoiceID)
     );
 
 CREATE TABLE food_list (
@@ -36,9 +38,9 @@ CREATE TABLE food_list (
 	Foreign Key foodkey (FoodID) REFERENCES foods (FoodID)
     );
 	
-INSERT INTO invoice (CustomerID, FoodReady)
-VALUES (111,'2019-06-07'),
-(1234,'2019-07-22');
+INSERT INTO invoice (CustomerID, InvoiceDate, FoodReady)
+VALUES (111,'2019-06-07', '2019-06-07'),
+(1234,'2019-07-22', '2019-09-07');
 
 INSERT INTO customer (Fname, Lname, Phone, Email, CCnumber) 
 VALUES ('Dallas', 'Wyciskalla', 3145551212, 

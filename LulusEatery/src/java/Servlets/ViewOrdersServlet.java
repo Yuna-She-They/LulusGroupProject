@@ -6,9 +6,10 @@
 package Servlets;
 
 import business.Order;
+import business.Invoice;
+import business.InvoiceDB;
 import business.OrderDB;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,12 +28,18 @@ public class ViewOrdersServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String URL="/ViewOrders.jsp";
         String msg = "";
-        List <Order> orders;
+        List <Invoice> invoices;
         
-//        orders = OrderDB.getOrders();//change to getOrdersByDate
-//        
-//        request.setAttribute("orders", orders);
-        
+        try {
+            invoices = InvoiceDB.getInvoices();//change to getOrdersByDate
+            if (invoices != null && invoices.size() > 0) {
+                request.getSession().setAttribute("invoices", invoices);
+            } else {
+                msg = "No items read from file<br>";
+            }
+        } catch (Exception e) {
+            msg = "Servlet error: " + e.getMessage() + "<br>";
+        }     
         
         request.setAttribute("msg", msg);
         RequestDispatcher disp = getServletContext().getRequestDispatcher(URL);

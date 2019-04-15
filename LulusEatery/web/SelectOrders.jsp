@@ -56,6 +56,9 @@
 						Leave all fields blank to view all orders<br />
 						<input  type="submit" id="submit" value="View Orders">
 					</form>
+                                    <form action='ViewCustomers' method='post'>
+                                        <input  type="submit" id="submit" value="View Customers">
+                                    </form>
 				</article>
 				<footer id="info">
 					<a href="https://www.google.com/maps/place/Lulu's+Local+Eatery,+LLC/@38.5989912,-90.2430857,15z/data=!4m8!1m2!3m1!2sLulu's+Local+Eatery,+LLC!3m4!1s0x0:0x5e32f72323d673d7!8m2!3d38.5989918!4d-90.2430859" target="_blank">3201 S Grand Ave St. Louis, MO 63118</a><br />

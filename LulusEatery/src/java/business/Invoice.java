@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -23,42 +25,43 @@ import org.hibernate.annotations.CascadeType;
 
 @Entity
 @Table(name="invoice")
-public class Order {
+public class Invoice {
     
     @Id
     @Column(name="InvoiceID")
-    private int orderID;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int invoiceID;
     
     @Column(name="CustomerID")
     private int customerID;
     
     @Column(name="InvoiceDate")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date orderdate;//sql timestamp
+    @Temporal(TemporalType.DATE)
+    private Date invoicedate;//sql timestamp
     
     @Column(name="FoodReady")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date pickupdate;//sql datetime
     
     @OneToMany(fetch=FetchType.EAGER)
     @JoinColumn(name="InvoiceID")
     @Cascade(CascadeType.ALL)
-    @OrderBy("FoodID")
+    @OrderBy("InvoiceID")
     private List<ItemList> itemlist;
     
-    public Order() {
-        this.orderID=0;
+    public Invoice() {
+        this.invoiceID=0;
         this.customerID=0;
-        this.orderdate=null;
+        this.invoicedate=null;
         this.pickupdate=null;
     }
 
-    public int getOrderID() {
-        return orderID;
+    public int getInvoiceID() {
+        return invoiceID;
     }
 
-    public void setOrderID(int orderID) {
-        this.orderID = orderID;
+    public void setInvoiceID(int invoiceID) {
+        this.invoiceID = invoiceID;
     }
 
     public int getCustomerID() {
@@ -69,12 +72,12 @@ public class Order {
         this.customerID = customerID;
     }
 
-    public Date getOrderdate() {
-        return orderdate;
+    public Date getInvoicedate() {
+        return invoicedate;
     }
 
-    public void setOrderdate(Date orderdate) {
-        this.orderdate = orderdate;
+    public void setInvoicedate(Date invoicedate) {
+        this.invoicedate = invoicedate;
     }
 
     public Date getPickupdate() {
@@ -92,4 +95,5 @@ public class Order {
     public void setItemlist(List<ItemList> itemlist) {
         this.itemlist = itemlist;
     }
+
 }

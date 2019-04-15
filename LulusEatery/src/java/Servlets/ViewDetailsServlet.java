@@ -1,8 +1,14 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Servlets;
 
+import business.Invoice;
+import business.ItemList;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,17 +19,31 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author wmscottsimpsonjr
  */
-public class LogonServlet extends HttpServlet {
+public class ViewDetailsServlet extends HttpServlet {
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String URL = "/Logon.jsp", msg="";
-        
-        if (request.getParameter("userid").equals("wmscottsimpsonjr") && request.getParameter("password").equals("password")) {
-            URL = "/SelectOrders.jsp";
-        } else {
-            msg = "Logon credentials invalid.";
-        }
+        String URL="/viewdetails.jsp";
+        String msg = "";
+        int invoiceID;
+        Invoice inv = null;
+        List <Invoice> invoices;
+        try {
+            invoices = (List<Invoice>) request.getSession().getAttribute("invoices");
+            invoiceID = Integer.parseInt(request.getParameter("invoiceid"));
+            for (Invoice invoice : invoices) {
+                if (invoice.getInvoiceID()==invoiceID) {
+                    request.getSession().setAttribute("invoiceview", invoice);
+                    inv = invoice;
+                }
+            }
+            if (inv == null) {
+                msg = "Invoice ID not found.<br>";
+            }
+        } catch (Exception e) {
+            msg += "Servlet error: " + e.getMessage() + "<br>";
+        }     
         
         request.setAttribute("msg", msg);
         RequestDispatcher disp = getServletContext().getRequestDispatcher(URL);
