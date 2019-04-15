@@ -42,3 +42,6 @@ li a:hover {
 
 li a:active {
   color: #4cff00; }
+  
+p {
+  padding-bottom: 1em; }
