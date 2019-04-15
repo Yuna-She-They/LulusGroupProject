@@ -43,6 +43,15 @@ public class Invoice {
     @Temporal(TemporalType.DATE)
     private Date pickupdate;//sql datetime
     
+    @Column(name="TotalPrice")
+    private double totalprice;
+    
+    @Column(name="ReadyForPickup")
+    private boolean readyforpickup;
+    
+    @Column(name="PickedUp")
+    private boolean pickedup;
+    
     @OneToMany(fetch=FetchType.EAGER)
     @JoinColumn(name="InvoiceID")
     @Cascade(CascadeType.ALL)
@@ -54,6 +63,9 @@ public class Invoice {
         this.customerID=0;
         this.invoicedate=null;
         this.pickupdate=null;
+        this.totalprice=0.0;
+        this.readyforpickup=false;
+        this.pickedup=false;
     }
 
     public int getInvoiceID() {
@@ -88,6 +100,30 @@ public class Invoice {
         this.pickupdate = pickupdate;
     }
 
+    public double getTotalprice() {
+        return totalprice;
+    }
+
+    public void setTotalprice(double totalprice) {
+        this.totalprice = totalprice;
+    }
+
+    public boolean isReadyforpickup() {
+        return readyforpickup;
+    }
+
+    public void setReadyforpickup(boolean readyforpickup) {
+        this.readyforpickup = readyforpickup;
+    }
+
+    public boolean isPickedup() {
+        return pickedup;
+    }
+
+    public void setPickedup(boolean pickedup) {
+        this.pickedup = pickedup;
+    }
+
     public List<ItemList> getItemlist() {
         return itemlist;
     }
@@ -95,5 +131,6 @@ public class Invoice {
     public void setItemlist(List<ItemList> itemlist) {
         this.itemlist = itemlist;
     }
+
 
 }

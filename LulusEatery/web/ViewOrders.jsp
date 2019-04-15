@@ -47,6 +47,8 @@
 								<td><span class=tableheader>Order ID</span></td>
 								<td><span class=tableheader>Customer ID</span></td>
 								<td><span class=tableheader>Total Price</span></td>
+                                                                <td><span class=tableheader>Ready</span></td>
+                                                                <td><span class=tableheader>Picked Up</span></td>
 							</tr>
 							<c:forEach var="i" items="${invoices}" >
 							<tr>
@@ -55,7 +57,23 @@
 								<td>${i.pickupdate}</td>
 								<td>${i.invoiceID}</td>
 								<td>${i.customerID}</td>
-								<td>i.totalprice</td>
+								<td>${i.totalprice}</td>
+                                                                <td>
+                                                                    <c:if test = "${i.readyforpickup}">
+                                                                        Y
+                                                                    </c:if>
+                                                                    <c:if test = "${!i.readyforpickup}">
+                                                                        N
+                                                                    </c:if>
+                                                                </td>
+                                                                <td>
+                                                                    <c:if test = "${i.pickedup}">
+                                                                        Y
+                                                                    </c:if>
+                                                                    <c:if test = "${!i.pickedup}">
+                                                                        N
+                                                                    </c:if>
+                                                                </td>
 							</tr>
 							</c:forEach>
 						</table>

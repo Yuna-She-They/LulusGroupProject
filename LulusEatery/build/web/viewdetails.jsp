@@ -45,13 +45,31 @@
                                             <td><span class=tableheader>Order ID</span></td>
                                             <td><span class=tableheader>Customer ID</span></td>
                                             <td><span class=tableheader>Total Price</span></td>
+                                            <td><span class=tableheader>Ready</span></td>
+                                            <td><span class=tableheader>Picked Up</span></td>
                                         </tr>
                                         <tr>
                                             <td>${invoiceview.invoicedate}</td>
                                             <td>${invoiceview.pickupdate}</td>
                                             <td>${invoiceview.invoiceID}</td>
                                             <td>${invoiceview.customerID}</td>
-                                            <td>price</td>
+                                            <td>${invoiceview.totalprice}</td>
+                                            <td>
+                                                <c:if test = "${invoiceview.readyforpickup}">
+                                                    Y
+                                                </c:if>
+                                                <c:if test = "${!invoiceview.readyforpickup}">
+                                                    N
+                                                </c:if>
+                                            </td>
+                                            <td>
+                                                <c:if test = "${invoiceview.pickedup}">
+                                                    Y
+                                                </c:if>
+                                                <c:if test = "${!invoiceview.pickedup}">
+                                                    N
+                                                </c:if>
+                                            </td>
                                         </tr>
                                     </table>
                                     <br>

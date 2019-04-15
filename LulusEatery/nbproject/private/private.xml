@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/viewdetails.jsp</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/InvoiceDB.java</file>
             <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/ItemList.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/ViewDetailsServlet.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/ViewOrders.jsp</file>
             <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/Item.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/ViewOrdersServlet.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/Invoice.java</file>
             <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/Order.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/Customer.java</file>
         </group>
     </open-files>
 </project-private>
