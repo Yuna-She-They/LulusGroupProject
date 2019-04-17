@@ -42,7 +42,7 @@
 						<table>
 							<tr>
 								<td><span class=tableheader>Delete</span></td>
-								<td><span class=tableheader>Quantity</span></td>
+								<td><span class=tableheader>Qty</span></td>
 								<td><span class=tableheader>Name</span></td>
 								<td><span class=tableheader>Price Each</span></td>
 							</tr>

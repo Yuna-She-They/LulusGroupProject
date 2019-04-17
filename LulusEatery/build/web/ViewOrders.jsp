@@ -53,8 +53,8 @@
 							<c:forEach var="i" items="${invoices}" >
 							<tr>
 								<td><input type="radio" name="invoiceid" value="${i.invoiceID}"/></td>
-								<td>${i.invoicedate}</td>
-								<td>${i.pickupdate}</td>
+								<td>${i.formattedinvoicedate}</td>
+								<td>${i.formattedpickupdate}</td>
 								<td>${i.invoiceID}</td>
 								<td>${i.customerID}</td>
 								<td>$${i.totalprice}</td>

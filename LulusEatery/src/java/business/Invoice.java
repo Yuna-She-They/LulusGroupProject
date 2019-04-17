@@ -1,6 +1,7 @@
 
 package business;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
@@ -131,6 +132,19 @@ public class Invoice {
     public void setItemlist(List<ItemList> itemlist) {
         this.itemlist = itemlist;
     }
-
+    
+    public String getFormattedpickupdate() {
+    String pattern = "yyyy-MM-dd hh:mm a";
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+    String formatdate = simpleDateFormat.format(this.pickupdate);
+    return formatdate;
+    }
+    
+    public String getFormattedinvoicedate() {
+    String pattern = "yyyy-MM-dd hh:mm a";
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+    String formatdate = simpleDateFormat.format(this.invoicedate);
+    return formatdate;
+    }
 
 }

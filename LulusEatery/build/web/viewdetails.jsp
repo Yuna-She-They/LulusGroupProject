@@ -49,8 +49,8 @@
                                             <td><span class=tableheader>Picked Up</span></td>
                                         </tr>
                                         <tr>
-                                            <td>${invoiceview.invoicedate}</td>
-                                            <td>${invoiceview.pickupdate}</td>
+                                            <td>${invoiceview.formattedinvoicedate}</td>
+                                            <td>${invoiceview.formattedpickupdate}</td>
                                             <td>${invoiceview.invoiceID}</td>
                                             <td>${invoiceview.customerID}</td>
                                             <td>$${invoiceview.totalprice}</td>
