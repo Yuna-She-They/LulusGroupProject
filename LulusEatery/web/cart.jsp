@@ -44,13 +44,19 @@
 								<td><span class=tableheader>Delete</span></td>
 								<td><span class=tableheader>Quantity</span></td>
 								<td><span class=tableheader>Name</span></td>
-								<td><span class=tableheader>Price</span></td>
+								<td><span class=tableheader>Price Each</span></td>
 							</tr>
 							<c:forEach var="itemlist" items="${itemlistlist}">
 								<tr>
                                                                     
 									<td><input type="checkbox" name="${itemlist.item.name}" value="${itemlist.item.name}"></td>
-									<td><input type="text" name="quantity${itemlist.item.itemID}" value="${itemlist.quantity}"/></td>
+                                                                        <td>
+                                                                            <select name="${itemlist.itemID}">
+                                                                                <c:forEach var="i" begin="1" end="20">
+                                                                                    <option value="${i}" ${itemlist.quantity == i ? 'selected' : ''}>${i}</option>
+                                                                                </c:forEach>
+                                                                            </select>
+                                                                        </td>
 									<td>${itemlist.item.name}</td>
 									<td><fmt:formatNumber value="${itemlist.item.price}" type="currency"/></td>
 								</tr>
