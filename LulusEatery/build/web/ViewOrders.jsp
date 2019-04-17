@@ -41,12 +41,12 @@
 					<form action="ViewDetails" method="post">
 						<table>
 							<tr>
-                                                                <td><span class=tableheader>Select</span></td>
+                                                                <td><span class=tableheader></span></td>
 								<td><span class=tableheader>Order Date</span></td>
 								<td><span class=tableheader>Pickup Date</span></td>
-								<td><span class=tableheader>Order ID</span></td>
-								<td><span class=tableheader>Customer ID</span></td>
-								<td><span class=tableheader>Total Price</span></td>
+								<td><span class=tableheader>Order</span></td>
+								<td><span class=tableheader>Cust</span></td>
+								<td><span class=tableheader>Total</span></td>
                                                                 <td><span class=tableheader>Ready</span></td>
                                                                 <td><span class=tableheader>Picked Up</span></td>
 							</tr>
@@ -57,7 +57,7 @@
 								<td>${i.pickupdate}</td>
 								<td>${i.invoiceID}</td>
 								<td>${i.customerID}</td>
-								<td>${i.totalprice}</td>
+								<td>$${i.totalprice}</td>
                                                                 <td>
                                                                     <c:if test = "${i.readyforpickup}">
                                                                         Y

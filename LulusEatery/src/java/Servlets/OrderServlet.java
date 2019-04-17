@@ -26,6 +26,10 @@ public class OrderServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String URL = "/order.jsp", msg="";
         
+        String readynow = request.getParameter("readynow");
+        request.setAttribute("readynow",readynow);
+        
+        
         List<Item> items;
         try {
             items = ItemDB.getItems();

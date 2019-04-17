@@ -36,11 +36,11 @@ public class Invoice {
     private int customerID;
     
     @Column(name="InvoiceDate")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date invoicedate;//sql timestamp
     
     @Column(name="FoodReady")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date pickupdate;//sql datetime
     
     @Column(name="TotalPrice")

@@ -87,7 +87,7 @@
                                     <div class="message">
                                         ${msg}
                                     </div>
-                                    <c:if test = "${param.readytime == 'later'}">
+                                    <c:if test = "${param.readynow == 'later'}">
                                         <div class="calendar">
                                             When would you like your order to be ready?
                                             <!--date only
@@ -107,7 +107,7 @@
                                           <!--number 3-->
                                           <!--<div style="width: 250px; margin: 50px auto;">-->
                                                 <div id="picker"> </div>
-                                                <input type="hidden" id="result" value="" />
+                                                <input type="hidden" name="pickuptime" id="pickuptime" value="" />
                                             <!--</div>-->
                                           
                                             
@@ -133,8 +133,15 @@
                                                 <c:if test="${item.category == 'Starter'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
-                                                            <td><input type="text" name="quantity${item.name}" id="quantity${item.name}" value="1"/></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td>
+                                                                <select name="${item.itemID}">
+                                                                    <c:forEach var="i" begin="1" end="20">
+                                                                        <option value="${i}">${i}</option>
+                                                                    </c:forEach>
+                                                                </select>
+                                                            </td>
+                                                            <%--old way: <td><input type="text" name="${item.itemID}" value="1"/></td>--%>
                                                             <td>${item.name}</td>
                                                             <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
                                                         </tr>
@@ -157,8 +164,14 @@
                                                 <c:if test="${item.category == 'Burger'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
-                                                            <td><input type="text" name="quantity${item.name}" id="quantity${item.name}" value="1"/></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td>
+                                                                <select name="${item.itemID}">
+                                                                    <c:forEach var="i" begin="1" end="20">
+                                                                        <option value="${i}">${i}</option>
+                                                                    </c:forEach>
+                                                                </select>
+                                                            </td>
                                                             <td>${item.name}</td>
                                                             <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
                                                         </tr>
@@ -181,8 +194,14 @@
                                                 <c:if test="${item.category == 'Tacos'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
-                                                            <td><input type="text" name="quantity${item.name}" id="quantity${item.name}" value="1"/></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td>
+                                                                <select name="${item.itemID}">
+                                                                    <c:forEach var="i" begin="1" end="20">
+                                                                        <option value="${i}">${i}</option>
+                                                                    </c:forEach>
+                                                                </select>
+                                                            </td>
                                                             <td>${item.name}</td>
                                                             <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
                                                         </tr>
@@ -205,8 +224,14 @@
                                                 <c:if test="${item.category == 'Bowl'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
-                                                            <td><input type="text" name="quantity${item.name}" id="quantity${item.name}" value="1"/></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td>
+                                                                <select name="${item.itemID}">
+                                                                    <c:forEach var="i" begin="1" end="20">
+                                                                        <option value="${i}">${i}</option>
+                                                                    </c:forEach>
+                                                                </select>
+                                                            </td>
                                                             <td>${item.name}</td>
                                                             <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
                                                         </tr>
@@ -229,8 +254,14 @@
                                                 <c:if test="${item.category == 'Kids'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
-                                                            <td><input type="text" name="quantity${item.name}" id="quantity${item.name}" value="1"/></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td>
+                                                                <select name="${item.itemID}">
+                                                                    <c:forEach var="i" begin="1" end="20">
+                                                                        <option value="${i}">${i}</option>
+                                                                    </c:forEach>
+                                                                </select>
+                                                            </td>
                                                             <td>${item.name}</td>
                                                             <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
                                                         </tr>

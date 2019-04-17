@@ -30,8 +30,9 @@ public class ViewOrdersServlet extends HttpServlet {
         String msg = "";
         List <Invoice> invoices;
         
+        //add getInvoicesByDate(date)
         try {
-            invoices = InvoiceDB.getInvoices();//change to getOrdersByDate
+            invoices = InvoiceDB.getInvoices();
             if (invoices != null && invoices.size() > 0) {
                 request.getSession().setAttribute("invoices", invoices);
             } else {

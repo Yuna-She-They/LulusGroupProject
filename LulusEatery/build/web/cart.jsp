@@ -36,6 +36,7 @@
 					</nav>
 				</header>
 				<article id="cart">
+                                    ${msg}
 					<h1>Shopping Cart</h1>
 					<form action="SubmitOrder" method="post">
 						<table>
@@ -45,20 +46,26 @@
 								<td><span class=tableheader>Name</span></td>
 								<td><span class=tableheader>Price</span></td>
 							</tr>
-							<tr>
-								<td><input type="checkbox" name="${item.item.name}" value="${item.item.name}"></td>
-								<td><input type="text" name="quantityTest" id="quantityTest" value="1"/></td>
-								<td>Test</td>
-								<td><fmt:formatNumber value="5.95" type="currency"/></td>
-							</tr>
-							<c:forEach var="item" items="${itemlist}">
+							<c:forEach var="itemlist" items="${itemlistlist}">
 								<tr>
-									<td><input type="checkbox" name="${item.item.name}" value="${item.item.name}"></td>
-									<td><input type="text" name="quantity${item.item.name}" id="quantity${item.item.name}" value="${item.quantity}"/></td>
-									<td>${item.item.name}</td>
-									<td><fmt:formatNumber value="${item.item.price}" type="currency"/></td>
+                                                                    
+									<td><input type="checkbox" name="${itemlist.item.name}" value="${itemlist.item.name}"></td>
+									<td><input type="text" name="quantity${itemlist.item.itemID}" value="${itemlist.quantity}"/></td>
+									<td>${itemlist.item.name}</td>
+									<td><fmt:formatNumber value="${itemlist.item.price}" type="currency"/></td>
 								</tr>
 							</c:forEach>
+                                                        <%--
+                                                        <c:forEach var="item" items="${orderitems}">
+                                                            <tr>
+
+                                                                    <td><input type="checkbox" name="${item.name}" value="${item.name}"></td>
+                                                                    <td><input type="text" name="quantity${item.name}" id="quantity${item.name}" value="quantity from previous page"/></td>
+                                                                    <td>${item.name}</td>
+                                                                    <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
+                                                            </tr>
+							</c:forEach>
+                                                        --%>
 						</table>
 						<div class="buttonholder">
 							<!--just go back to order.jsp-->

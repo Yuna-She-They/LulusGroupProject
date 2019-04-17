@@ -42,9 +42,9 @@
                                         <tr>
                                             <td><span class=tableheader>Order Date</span></td>
                                             <td><span class=tableheader>Pickup Date</span></td>
-                                            <td><span class=tableheader>Order ID</span></td>
-                                            <td><span class=tableheader>Customer ID</span></td>
-                                            <td><span class=tableheader>Total Price</span></td>
+                                            <td><span class=tableheader>Order</span></td>
+                                            <td><span class=tableheader>Cust</span></td>
+                                            <td><span class=tableheader>Total</span></td>
                                             <td><span class=tableheader>Ready</span></td>
                                             <td><span class=tableheader>Picked Up</span></td>
                                         </tr>
@@ -53,7 +53,7 @@
                                             <td>${invoiceview.pickupdate}</td>
                                             <td>${invoiceview.invoiceID}</td>
                                             <td>${invoiceview.customerID}</td>
-                                            <td>${invoiceview.totalprice}</td>
+                                            <td>$${invoiceview.totalprice}</td>
                                             <td>
                                                 <c:if test = "${invoiceview.readyforpickup}">
                                                     Y
@@ -85,7 +85,7 @@
                                                 <td>${item.itemID}</td>
                                                 <td>${item.item.name}</td>
                                                 <td>${item.quantity}</td>
-                                                <td>@${item.item.price}</td>
+                                                <td>@$${item.item.price}</td>
                                             </tr>
                                         </c:forEach>
                                     </table>            
