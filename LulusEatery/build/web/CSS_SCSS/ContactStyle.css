@@ -47,4 +47,5 @@ input[type="text"], input[type="email"], textarea{
 
 textarea {
     width: 100%;
+    resize: vertical;
 }

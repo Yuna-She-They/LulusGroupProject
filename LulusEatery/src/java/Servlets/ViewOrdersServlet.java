@@ -5,10 +5,8 @@
  */
 package Servlets;
 
-import business.Order;
 import business.Invoice;
 import business.InvoiceDB;
-import business.OrderDB;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.RequestDispatcher;

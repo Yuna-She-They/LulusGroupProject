@@ -38,6 +38,7 @@
                                     <div class="message">
                                         ${msg}
                                     </div>
+                                    <%--Customer: ${invoiceview.customer.lname}, ${invoiceview.customer.fname}--%>
                                     <table>
                                         <tr>
                                             <td><span class=tableheader>Order Date</span></td>

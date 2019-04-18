@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -59,6 +60,11 @@ public class Invoice {
     @OrderBy("InvoiceID")
     private List<ItemList> itemlist;
     
+    //took out bc it broke the invoice
+//    @OneToOne (fetch=FetchType.EAGER)
+//    @JoinColumn (name="CustomerID",insertable=false,updatable=false)
+//    private Customer customer;
+    
     public Invoice() {
         this.invoiceID=0;
         this.customerID=0;
@@ -67,6 +73,7 @@ public class Invoice {
         this.totalprice=0.0;
         this.readyforpickup=false;
         this.pickedup=false;
+        //this.customer = null;
     }
 
     public int getInvoiceID() {
@@ -146,5 +153,13 @@ public class Invoice {
     String formatdate = simpleDateFormat.format(this.invoicedate);
     return formatdate;
     }
+
+//    public Customer getCustomer() {
+//        return customer;
+//    }
+//
+//    public void setCustomer(Customer customer) {
+//        this.customer = customer;
+//    }
 
 }
