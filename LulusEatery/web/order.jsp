@@ -84,6 +84,7 @@
 					</nav>
 				</header>
 				<article id="order">
+                                <form action="Cart" method="post">
                                     <div class="message">
                                         ${msg}
                                     </div>
@@ -108,6 +109,7 @@
                                           <!--<div style="width: 250px; margin: 50px auto;">-->
                                                 <div id="picker"> </div>
                                                 <input type="hidden" name="pickuptime" id="pickuptime" value="" />
+                                                <!--<input name="pickuptimetest" value="2019-08-08">-->
                                             <!--</div>-->
                                           
                                             
@@ -118,7 +120,7 @@
                                             Select the menu items you would like to order:
 					</p>
                                         <br>
-                                        <form action="Cart" method="post">
+                                        
                                             <div class="ordertitle">
                                                     Starters, Salads, &amp; Sides
                                             </div>

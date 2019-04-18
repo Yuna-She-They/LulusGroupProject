@@ -38,6 +38,8 @@
 				<article id="cart">
                                     ${msg}
 					<h1>Shopping Cart</h1>
+                                        Pickup time: ${invoice.weekdaypickupdate}
+                                        <br><br>
 					<form action="SubmitOrder" method="post">
 						<table>
 							<tr>

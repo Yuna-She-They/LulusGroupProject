@@ -34,7 +34,7 @@ public class CartServlet extends HttpServlet {
         String[] itemIDs;
         String[] itemQs;
         Date readytime = null;
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         String readynow;
         
         //really should set items now, then all other invoice info upon submit
@@ -92,24 +92,40 @@ public class CartServlet extends HttpServlet {
         
 
         
-        
+                try{
+            
+        } catch (Exception e) {
+            msg = "Ready time error: " + e.getMessage();
+        }
         try {
-            readynow = String.valueOf(request.getSession().getAttribute("readynow"));        
+            readynow = String.valueOf(request.getSession().getAttribute("readynow"));
             if (readynow.equals("later")) {
                 try {
-                    readytime = formatter.parse(request.getParameter("pickuptime"));
+                    
+                    readytime = formatter.parse(request.getParameter("pickuptime")+":00");
+                    //String rt = String.valueOf(request.getSession().getAttribute("readytime"));
+                    //readytime = formatter.parse(rt);
+                    //readytime = formatter.parse(request.getSession().getAttribute("pickuptime"));
+                    //request.getSession().setAttribute("readytime",readytime);
                     invoice.setPickupdate(readytime);
+                    request.getSession().setAttribute("invoice",invoice);
+                    
                 } catch (Exception e) {
                     msg = "Date error: " + e.getMessage();
                 }
 
             } else {
-                //really shouldn't set time until submit
+                //really shouldn't set time until submit? Maybe just change upon submit if it's less than 25 minutes away
                 Date currenttime = new Date();
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(currenttime);
                 cal.add(Calendar.MINUTE, 30);
+//                String rt;
+//                rt = formatter.format(cal.getTime());
+//                readytime = formatter.parse(rt);
                 readytime = cal.getTime();
+                invoice.setPickupdate(readytime);
+                request.getSession().setAttribute("invoice",invoice);
             }
         } catch (Exception e) {
             msg = "Pickup time error: " + e.getMessage();

@@ -8,6 +8,8 @@ import business.Item;
 import business.ItemDB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,9 +27,17 @@ public class OrderServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String URL = "/order.jsp", msg="";
+        Date pickuptime;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
         
-        String readynow = request.getParameter("readynow");
-        request.setAttribute("readynow",readynow);
+        
+        try{
+            String readynow = request.getParameter("readynow");
+            request.getSession().setAttribute("readynow",readynow);
+        } catch (Exception e) {
+            msg = "Ready now error: " + e.getMessage();
+        }
+        
         
         
         List<Item> items;
@@ -36,11 +46,21 @@ public class OrderServlet extends HttpServlet {
             if (items != null && items.size() > 0) {
                 request.getSession().setAttribute("items", items);
             } else {
-                msg = "No items read from file<br>";
+                msg += "No items read from file<br>";
             }
         } catch (Exception e) {
-            msg = "Servlet error: " + e.getMessage() + "<br>";
+            msg += "Servlet error: " + e.getMessage() + "<br>";
         }
+        
+        
+//        try {
+//            String pt = request.getParameter("pickuptime");
+//            if (!pt.equals("")) {
+//            request.getSession().setAttribute("readytime", request.getParameter("pickuptime"));
+//            }
+//        } catch (Exception e) {
+//            msg += "Pickup Time error: " + e.getMessage();
+//        }
         
         
         

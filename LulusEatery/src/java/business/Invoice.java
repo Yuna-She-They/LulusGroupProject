@@ -147,6 +147,13 @@ public class Invoice {
     return formatdate;
     }
     
+    public String getWeekdaypickupdate() {
+    String pattern = "E, yyyy-MM-dd hh:mm a";
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+    String formatdate = simpleDateFormat.format(this.pickupdate);
+    return formatdate;
+    }
+    
     public String getFormattedinvoicedate() {
     String pattern = "yyyy-MM-dd hh:mm a";
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
