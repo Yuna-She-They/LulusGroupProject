@@ -19,11 +19,13 @@ public class LogonServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String URL = "/Logon.jsp", msg="";
         
-        if (request.getParameter("userid").equals("wmscottsimpsonjr") && request.getParameter("password").equals("password")) {
-            URL = "/SelectOrders.jsp";
-        } else {
-            msg = "Logon credentials invalid.";
-        }
+        URL = "/SelectOrders.jsp";
+        
+//        if (request.getParameter("userid").equals("wmscottsimpsonjr") && request.getParameter("password").equals("password")) {
+//            URL = "/SelectOrders.jsp";
+//        } else {
+//            msg = "Logon credentials invalid.";
+//        }
         
         request.setAttribute("msg", msg);
         RequestDispatcher disp = getServletContext().getRequestDispatcher(URL);

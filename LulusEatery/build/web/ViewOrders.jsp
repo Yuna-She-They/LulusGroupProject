@@ -57,7 +57,7 @@
 								<td>${i.formattedpickupdate}</td>
 								<td>${i.invoiceID}</td>
 								<td>${i.customerID}</td>
-								<td>$${i.totalprice}</td>
+								<td><fmt:formatNumber value="${i.totalprice}" type="currency"/></td>
                                                                 <td>
                                                                     <c:if test = "${i.readyforpickup}">
                                                                         Y

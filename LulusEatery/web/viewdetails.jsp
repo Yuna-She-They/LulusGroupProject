@@ -53,7 +53,7 @@
                                             <td>${invoiceview.formattedpickupdate}</td>
                                             <td>${invoiceview.invoiceID}</td>
                                             <td>${invoiceview.customerID}</td>
-                                            <td>$${invoiceview.totalprice}</td>
+                                            <td><fmt:formatNumber value="${invoiceview.totalprice}" type="currency"/></td>
                                             <td>
                                                 <c:if test = "${invoiceview.readyforpickup}">
                                                     Y
@@ -85,7 +85,7 @@
                                                 <td>${item.itemID}</td>
                                                 <td>${item.item.name}</td>
                                                 <td>${item.quantity}</td>
-                                                <td>@$${item.item.price}</td>
+                                                <td>@<fmt:formatNumber value="${item.item.price}" type="currency"/></td>
                                             </tr>
                                         </c:forEach>
                                     </table>            
