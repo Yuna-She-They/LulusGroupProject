@@ -111,6 +111,7 @@
                                                 <input type="hidden" name="pickuptime" id="pickuptime" value="" />
                                                 <!--<input name="pickuptimetest" value="2019-08-08">-->
                                             <!--</div>-->
+                                            (Pickup available Monday&ndash;Saturday noon&ndash;8:3 PM)
                                           
                                             
                                             
