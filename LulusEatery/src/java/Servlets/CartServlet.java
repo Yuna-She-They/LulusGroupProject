@@ -34,7 +34,7 @@ public class CartServlet extends HttpServlet {
         String[] itemIDs;
         String[] itemQs;
         Date readytime = null;
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
         String readynow;
         
         //really should set items now, then all other invoice info upon submit
@@ -102,7 +102,8 @@ public class CartServlet extends HttpServlet {
             if (readynow.equals("later")) {
                 try {
                     
-                    readytime = formatter.parse(request.getParameter("pickuptime")+":00");
+                    readytime = formatter.parse(request.getParameter("pickuptime"));
+                    //readytime = formatter.parse(request.getParameter("pickuptime")+":00");
                     //String rt = String.valueOf(request.getSession().getAttribute("readytime"));
                     //readytime = formatter.parse(rt);
                     //readytime = formatter.parse(request.getSession().getAttribute("pickuptime"));

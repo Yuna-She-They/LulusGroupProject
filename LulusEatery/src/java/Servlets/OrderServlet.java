@@ -30,12 +30,19 @@ public class OrderServlet extends HttpServlet {
         Date pickuptime;
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
         
+        //removes cart when "begin order" is clicked
+        try {
+            request.getSession().removeAttribute("itemlistlist");
+        } catch (Exception e) {
+            msg = "list not removed" + e.getMessage() + "<br>";
+        }
+        
         
         try{
             String readynow = request.getParameter("readynow");
             request.getSession().setAttribute("readynow",readynow);
         } catch (Exception e) {
-            msg = "Ready now error: " + e.getMessage();
+            msg += "Ready now error: " + e.getMessage() + "<br>";
         }
         
         

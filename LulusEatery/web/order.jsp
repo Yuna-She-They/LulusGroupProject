@@ -56,7 +56,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment-with-locales.min.js"></script>
     <link href="CSS_SCSS/datetimepicker.css" rel="stylesheet">
-    <script src="js/datetimepicker.js"></script>
+    <script src="js/datetimepickerNEW.js"></script>
 
 <div class="pickerholder">
     <script type="text/javascript">
