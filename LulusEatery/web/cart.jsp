@@ -39,6 +39,8 @@
                                     ${msg}
 					<h1>Shopping Cart</h1>
                                         Pickup time: ${invoice.weekdaypickupdate}
+                                        <br>
+                                        (Pickup available Monday&ndash;Saturday, Noon&ndash;8:30 PM)
                                         <br><br>
 					<form action="SubmitOrder" method="post">
 						<table>
