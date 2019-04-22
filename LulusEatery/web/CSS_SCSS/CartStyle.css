@@ -12,3 +12,12 @@ h1 {
 .tableheader {
     color: #43a554;
 }
+
+input[type="text"] {
+    border: 1px solid black;
+    width: 200px;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    font-family: Montserrat,Verdana,Arial,sans-serif;
+}

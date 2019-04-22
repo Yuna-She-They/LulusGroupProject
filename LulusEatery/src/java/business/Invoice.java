@@ -160,6 +160,26 @@ public class Invoice {
     String formatdate = simpleDateFormat.format(this.invoicedate);
     return formatdate;
     }
+    
+    public boolean isWithinRange(Date testDate) {
+        String pattern = "hh:mm A";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        Date startTime = null;
+        Date endTime = null;
+        
+        try {
+        startTime = simpleDateFormat.parse("12:00 AM");
+        endTime = simpleDateFormat.parse("8:30 PM");
+        
+        } catch (Exception e) {
+            
+        }
+        if (startTime != null && endTime != null) {
+            return !(testDate.before(startTime) || testDate.after(endTime));
+        } else {
+            return true;
+        }
+     }
 
 //    public Customer getCustomer() {
 //        return customer;

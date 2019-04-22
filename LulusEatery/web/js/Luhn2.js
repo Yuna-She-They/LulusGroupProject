@@ -1,12 +1,24 @@
 "use strict";
 exports.__esModule = true;
-/**
- * check strToTest with Luhn algo
- *
- * @param {string} strToTest
- * @param {number} multiple
- * @return {number} the correct number of checksum
- */
+
+var $ = function(id) {
+    return document.getElementById(id);
+};
+
+window.onload = function() {
+    $("testCC").onclick = process;
+};
+
+function process() {
+	var strToTest = $("ccnumber").value;
+	var isValid = checkLuhn(strToTest, 10);
+	if (isValid) {
+            $("ccRes").innerHTML = "credit card number is valid";
+	} else {
+            $("ccRes").innerHTML = "credit card number is not valid";
+        }
+}
+
 function checkLuhn(strToTest, multiple) {
     if (multiple === void 0) { multiple = 10; }
     var digit = 0;
@@ -15,7 +27,7 @@ function checkLuhn(strToTest, multiple) {
     var odd = false;
     for (var i = (length - 1); i >= 0; i--) {
         digit = parseInt(strToTest[i], 10) | 0;
-        if (odd == true) {
+        if (odd === true) {
             digit = digit * 2 | 0;
         }
         if (digit > 9) {

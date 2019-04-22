@@ -20,6 +20,7 @@
 		<!-- Adds an icon library to the website -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"> 
+                <script src="js/LuhnAlt.js"></script>
 		<title>Cart - Lulu's Local Eatery</title>
 	</head>
 	<body id="page-top">
@@ -77,10 +78,15 @@
 							</c:forEach>
                                                         --%>
 						</table>
+                                                <div class="creditcard">
+                                                    <input type="text" id="ccnumber" placeholder="credit card number" />
+                                                    <input type="button" id="testCC" value="Test CC#" />
+                                                    <span id="ccRes"></span>
+                                                </div>
 						<div class="buttonholder">
 							<!--just go back to order.jsp-->
 							<input type="submit" id="submit" name="back" value="Add More" />
-							<!--update itemlist-->
+							<!--update itemlistlist-->
 							<input type="submit" id="submit" name="update" value="Update" />
 							<input type="submit" id="submit" name="place" value="Place Order" />
 						</div>

@@ -5,7 +5,6 @@ import business.Item;
 import business.ItemDB;
 import business.ItemList;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -104,6 +103,35 @@ public class CartServlet extends HttpServlet {
                     
                     readytime = formatter.parse(request.getParameter("pickuptime"));
                     //readytime = formatter.parse(request.getParameter("pickuptime")+":00");
+                    
+                    //check that selected time is between noon and 830 pm. Also need to check that it's far enough in the future, and not on a sunday
+                    String pattern = "HH:mm";
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+                    Date startTime = null;
+                    Date endTime = null;
+                    boolean isValidTime = true;
+
+                    try {
+                    startTime = simpleDateFormat.parse("12:00");
+                    endTime = simpleDateFormat.parse("20:30");
+                    int test = 1;
+
+                    } catch (Exception e) {
+                        msg += "Could not set date range " +e.getMessage() + "<br>";
+                    }
+                    if (startTime != null && endTime != null) {
+                        if (readytime.before(startTime) || readytime.after(endTime)) {
+                            
+                            isValidTime = false;
+                        } else {
+                            isValidTime = true;
+                        }
+                    }
+                    
+                    if (!isValidTime) {
+                        URL = "/order.jsp";
+                        msg = "Please select a time within range";
+                    }
                     //String rt = String.valueOf(request.getSession().getAttribute("readytime"));
                     //readytime = formatter.parse(rt);
                     //readytime = formatter.parse(request.getSession().getAttribute("pickuptime"));
@@ -114,9 +142,12 @@ public class CartServlet extends HttpServlet {
                 } catch (Exception e) {
                     msg = "Date error: " + e.getMessage();
                 }
+                
+                
 
             } else {
                 //really shouldn't set time until submit? Maybe just change upon submit if it's less than 25 minutes away
+                //also needs to check against noon-830pm limitation and sunday limitation
                 Date currenttime = new Date();
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(currenttime);
