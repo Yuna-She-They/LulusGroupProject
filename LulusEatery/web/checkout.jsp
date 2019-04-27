@@ -36,8 +36,10 @@
 						<a href="contact_us.html">Contact Us</a>
 					</nav>
 				</header>
-				<article id="cart">
-                                    ${msg}
+				<article id="checkout">
+                                    <div class="message">
+                                        ${msg}
+                                    </div>
 					<h1>Check Out</h1>
                                         Pickup time: ${invoice.weekdaypickupdate}
                                         <br>

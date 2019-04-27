@@ -37,7 +37,9 @@
 					</nav>
 				</header>
 				<article id="cart">
-                                    ${msg}
+                                    <div class="message">
+                                        ${msg}
+                                    </div>
 					<h1>Shopping Cart</h1>
                                         Pickup time: ${invoice.weekdaypickupdate}
                                         <br>

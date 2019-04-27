@@ -36,6 +36,7 @@ public class CartServlet extends HttpServlet {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         String readynow;
         double total = 0.0;
+        boolean invalidtime=false;
         
         //check to see if cart has anything already (ie "add more" was clicked, also works if using back button).
         //Can duplicate an item if the user does so and selects an item they've already added. 
@@ -110,64 +111,135 @@ public class CartServlet extends HttpServlet {
             try {
                 readynow = String.valueOf(request.getSession().getAttribute("readynow"));
                 if (readynow.equals("later")) {
-                    try {
+                    //use dates to test for pickup time availability
+//                    try {
+//
+//                        pickuptime = formatter.parse(request.getParameter("pickuptime"));
+//
+//                        //check that selected time is between noon and 830 pm. Also need to check that it's far enough in the future, and not on a sunday
+//                        String pattern = "HH:mm";
+//                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+//                        Date startTime = null;
+//                        Date endTime = null;
+//                        boolean isValidTime = true;
+//
+//                        try {
+//                        startTime = simpleDateFormat.parse("12:00");
+//                        endTime = simpleDateFormat.parse("20:30");
+//                        int test = 1;
+//
+//                        } catch (Exception e) {
+//                            msg += "Could not set date range " +e.getMessage() + "<br>";
+//                        }
+//                        if (startTime != null && endTime != null) {
+//                            if (pickuptime.before(startTime) || pickuptime.after(endTime)) {
+//
+//                                isValidTime = false;
+//                            } else {
+//                                isValidTime = true;
+//                            }
+//                        }
+//
+//                        if (!isValidTime) {
+//                            URL = "/order.jsp";
+//                            msg = "Please select a time within range";
+//                        }
+//
+//                        invoice.setPickupdate(pickuptime);
+//                        request.getSession().setAttribute("invoice",invoice);
+//                        request.getSession().setAttribute("pickuptime",pickuptime);
+//
+//                    } catch (Exception e) {
+//                        msg = "Date error: " + e.getMessage();
+//                    }
 
-                        pickuptime = formatter.parse(request.getParameter("pickuptime"));
-                        //pickuptime = formatter.parse(request.getParameter("pickuptime")+":00");
-
-                        //check that selected time is between noon and 830 pm. Also need to check that it's far enough in the future, and not on a sunday
-                        String pattern = "HH:mm";
-                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-                        Date startTime = null;
-                        Date endTime = null;
-                        boolean isValidTime = true;
-
-                        try {
-                        startTime = simpleDateFormat.parse("12:00");
-                        endTime = simpleDateFormat.parse("20:30");
-                        int test = 1;
-
-                        } catch (Exception e) {
-                            msg += "Could not set date range " +e.getMessage() + "<br>";
-                        }
-                        if (startTime != null && endTime != null) {
-                            if (pickuptime.before(startTime) || pickuptime.after(endTime)) {
-
-                                isValidTime = false;
-                            } else {
-                                isValidTime = true;
-                            }
-                        }
-
-                        if (!isValidTime) {
-                            URL = "/order.jsp";
-                            msg = "Please select a time within range";
-                        }
-                        //String rt = String.valueOf(request.getSession().getAttribute("readytime"));
-                        //readytime = formatter.parse(rt);
-                        //readytime = formatter.parse(request.getSession().getAttribute("pickuptime"));
-                        //request.getSession().setAttribute("readytime",readytime);
-                        invoice.setPickupdate(pickuptime);
-                        request.getSession().setAttribute("invoice",invoice);
-                        request.getSession().setAttribute("pickuptime",pickuptime);
-
-                    } catch (Exception e) {
-                        msg = "Date error: " + e.getMessage();
-                    }
+                      //use String to check availability:
+                      try {
+                          SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
+                          Date ptdate = formatter2.parse(request.getParameter("pickuptime"));
+                          String pt = String.valueOf(ptdate);
+                          //split by space:
+                          String[] splitpt = pt.split("\\s+");
+                          //pos 3 has HH:mm:
+                          String splittime = splitpt[3];
+                          //Separate hour and minute:
+                          String[] splithourmin = splittime.split(":");
+                          int splithour = Integer.parseInt(splithourmin[0]);
+                          int splitmin = Integer.parseInt(splithourmin[1]);
+                          //if before 12 or after 9pm (hour is greater than 8)
+                          if (splithour < 12 || splithour > 20) {
+                              invalidtime=true;
+                          }
+                          //if it's 8pm something, and the minutes is greater than 30
+                          if (splithour == 20 && splitmin > 30) {
+                              invalidtime=true;
+                          }
+                          //if it's sunday
+                          String dayofweek = splitpt[0];
+                          if (dayofweek.startsWith("Su")) {
+                              invalidtime=true;
+                          }
+                          if (invalidtime){
+                              URL = "/order.jsp";
+                              msg = "Please select a time Monday&ndash;Saturday, Noon&ndash;8:30 PM<br>";
+                          } else {
+                              //unparseable by PlaceOrderServlet: shows up in format: Sat Apr 27 15:22:00 CDT 2019
+                              request.getSession().setAttribute("pickuptime",ptdate);
+                              invoice.setPickupdate(ptdate);
+                              request.getSession().setAttribute("invoice",invoice);
+                          }
+                          
+                      } catch (Exception e) {
+                          URL = "/order.jsp";
+                          msg = "Please select a pickup time.<br>";
+                      }
 
 
-
+                //if ready at soonest available time:
                 } else {
-                    //really shouldn't set time until submit? Maybe just change upon submit if it's less than 25 minutes away
-                    //also needs to check against noon-830pm limitation and sunday limitation
+
                     Date currenttime = new Date();
                     Calendar cal = Calendar.getInstance();
                     cal.setTime(currenttime);
                     cal.add(Calendar.MINUTE, 30);
-    //                String rt;
-    //                rt = formatter.format(cal.getTime());
-    //                pickuptime = formatter.parse(rt);
                     pickuptime = cal.getTime();
+                    String pickupstring = String.valueOf(pickuptime);
+                    
+                    //split by space:
+                    String[] splitpt = pickupstring.split("\\s+");
+                    String dayofweek = splitpt[0];
+                    //pos 3 gives HH:mm:ss
+                    String splittime = splitpt[3];
+                    String splithourmin[] = splittime.split(":");
+                    int splithour = Integer.parseInt(splithourmin[0]);
+                    int splitmin = Integer.parseInt(splithourmin[1]);
+                    
+                    //if sunday, move to next day at noon
+                    if (dayofweek.startsWith("Su")) {
+                        cal.add(Calendar.DATE, 1);
+                        cal.set(Calendar.HOUR_OF_DAY, 12);
+                        cal.set(Calendar.MINUTE, 0);
+                        pickuptime = cal.getTime();
+                        msg = "Your pickup has been scheduled on the next available day at noon.<br>";
+                    } else if (splithour < 12){
+                        cal.set(Calendar.HOUR_OF_DAY, 12);
+                        cal.set(Calendar.MINUTE, 0);
+                        pickuptime = cal.getTime();
+                        msg = "Your pickup has been scheduled at noon after opening.<br>";
+                    } else if (splithour > 20 || (splithour == 20 && splitmin > 30)) {
+                        //if it's already saturday, you need to add an extra day so that pickup day doesn't become sunday
+                        if (dayofweek.startsWith("Sa")){
+                            cal.add(Calendar.DATE, 1);
+                        }
+                        cal.add(Calendar.DATE, 1);
+                        cal.set(Calendar.HOUR_OF_DAY, 12);
+                        cal.set(Calendar.MINUTE, 0);
+                        pickuptime = cal.getTime();
+                        msg = "Your pickup has been scheduled on the next available day at noon.<br>";
+                    }
+                    
+                    
+                    
                     String pickupformat = formatter.format(pickuptime);
                     invoice.setPickupdate(pickuptime);
                     request.getSession().setAttribute("pickuptime",pickupformat);

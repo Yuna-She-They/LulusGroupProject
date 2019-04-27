@@ -59,18 +59,6 @@ public class OrderServlet extends HttpServlet {
             msg += "Servlet error: " + e.getMessage() + "<br>";
         }
         
-        
-//        try {
-//            String pt = request.getParameter("pickuptime");
-//            if (!pt.equals("")) {
-//            request.getSession().setAttribute("readytime", request.getParameter("pickuptime"));
-//            }
-//        } catch (Exception e) {
-//            msg += "Pickup Time error: " + e.getMessage();
-//        }
-        
-        
-        
         request.setAttribute("msg", msg);
         RequestDispatcher disp = getServletContext().getRequestDispatcher(URL);
         disp.forward(request, response);

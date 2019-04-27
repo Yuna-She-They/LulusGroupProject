@@ -10,6 +10,7 @@ import business.ItemListDB;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -46,6 +47,7 @@ public class PlaceOrderServlet extends HttpServlet {
         boolean custadded = false;
         boolean invoiceadded = false;
         boolean itemlistadded = false;
+        boolean timechanged = false;
         
 
         try {
@@ -56,7 +58,7 @@ public class PlaceOrderServlet extends HttpServlet {
             customer.setCcnumber(request.getParameter("ccnumber"));
             custadded = CustomerDB.addCustomer(customer);
             if (custadded) {
-                msg += "Customer added: " + customer.getCustomerID() + "<br>";
+                //msg += "Customer added: " + customer.getCustomerID() + "<br>";
                 request.getSession().setAttribute("placedcustomer", customer);
             } else {
                 msg += "Customer not added.<br>";
@@ -71,6 +73,21 @@ public class PlaceOrderServlet extends HttpServlet {
             try {
                 pickupstring = String.valueOf(request.getSession().getAttribute("pickuptime"));
                 pickuptime = formatter.parse(String.valueOf(request.getSession().getAttribute("pickuptime")));
+                
+                try {
+                    Date currenttime = new Date();
+                    Calendar cal = Calendar.getInstance();
+                    cal.setTime(currenttime);
+                    cal.add(Calendar.MINUTE, 20);
+                    Date timeplustwenty = cal.getTime();
+                    if (timeplustwenty.after(pickuptime)) {
+                        pickuptime = timeplustwenty;
+                        timechanged = true;
+                        request.getSession().setAttribute("timechanged", timechanged);
+                    }
+                } catch (Exception e) {
+                    msg += "Time change error: " + e.getMessage() + "<br>";
+                }
                 //msg = pickupstring;
                 Double total = (Double) request.getSession().getAttribute("total");
                 Date currenttime = new Date();
@@ -81,7 +98,7 @@ public class PlaceOrderServlet extends HttpServlet {
                 invoice.setTotalprice(total);
                 invoiceadded = InvoiceDB.addInvoice(invoice);
                 if (invoiceadded) {
-                    msg += "Invoice added: " + invoice.getInvoiceID() + "<br>";
+                    //msg += "Invoice added: " + invoice.getInvoiceID() + "<br>";
                 } else {
                     msg += "Invoice not added.<br>";
                 }
@@ -94,14 +111,14 @@ public class PlaceOrderServlet extends HttpServlet {
         if (invoiceadded) {
             try {
                 cart = (List<ItemList>) request.getSession().getAttribute("cart");
-                int q = 0;
+                //int q = 0;
                 for (ItemList il : cart) {
                     il.setOrderid(invoice.getInvoiceID());
                     itemlistadded = ItemListDB.addItemList(il);
-                    q++;
+                    //q++;
                 }
                 if (itemlistadded) {
-                    msg += q + " items ordered.<br>";
+                    //msg += q + " items ordered.<br>";
                 }
             } catch (Exception e) {
                 msg += "Itemlist write error: " + e.getMessage() + "<br>";

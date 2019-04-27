@@ -88,7 +88,7 @@
                                     <div class="message">
                                         ${msg}
                                     </div>
-                                    <c:if test = "${param.readynow == 'later'}">
+                                    <c:if test = "${param.readynow == 'later' || readynow == 'later'}">
                                         <div class="calendar">
                                             When would you like your order to be ready?
                                             <!--date only

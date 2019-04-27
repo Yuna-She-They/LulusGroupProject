@@ -40,6 +40,11 @@
 					<h1>Thank you for your order, ${placedcustomer.fname}!</h1>
                                         <br>
                                         Pickup time: ${placedinvoice.weekdaypickupdate}
+                                        <c:if test="${timechanged}">
+                                            <div class="timechanged">
+                                                Your time has been changed to the soonest available time.
+                                            </div>
+                                        </c:if>
                                         <br>
                                         <br>
                                         <table>
