@@ -182,3 +182,8 @@ table td:last-child {
 .pickerholder {
     color: black;
 }
+
+.visible {
+  color: #d15b57;
+  font-weight: bold;
+}

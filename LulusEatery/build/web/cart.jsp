@@ -41,7 +41,7 @@
                                         ${msg}
                                     </div>
 					<h1>Shopping Cart</h1>
-                                        Pickup time: ${invoice.weekdaypickupdate}
+                                        Pickup time: <span class="visible">${invoice.weekdaypickupdate}</span>
                                         <br>
                                         (Pickup available Monday&ndash;Saturday, Noon&ndash;8:30 PM)
                                         <br><br>

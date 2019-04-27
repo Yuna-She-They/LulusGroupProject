@@ -24,8 +24,8 @@
 		<title>Cart - Lulu's Local Eatery</title>
 	</head>
 	<body id="page-top">
-		<div class="container">
-			<div class="container2">
+		<div class="containera">
+			<div class="containera2">
 				<header>
 					<div class="logo"><img src="images/logogreen.jpg" width="250"></div>
 					<nav>
@@ -41,11 +41,11 @@
                                         ${msg}
                                     </div>
 					<h1>Check Out</h1>
-                                        Pickup time: ${invoice.weekdaypickupdate}
+                                        Pickup time: <span class="visible">${invoice.weekdaypickupdate}</span>
                                         <br>
                                         (Pickup available Monday&ndash;Saturday, Noon&ndash;8:30 PM)
                                         <br>
-                                        Total: <fmt:formatNumber value="${total}" type="currency"/>
+                                        Total: <span class="visible"><fmt:formatNumber value="${total}" type="currency"/></span>
                                         <br>
 					<form action="PlaceOrder" method="post">
                                             <table>
