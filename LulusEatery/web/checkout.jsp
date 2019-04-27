@@ -97,7 +97,7 @@
                                             Please bring your card when you come to pick up your food. It will not be charged until such time.
 
                                             <div class="buttonholder">
-                                                    <input type="submit" id="submit" name="placeorder" value="Place Order" />
+                                                    <input type="hidden" id="submit" name="placeorder" value="Place Order"/>
                                             </div>
 					</form>
 				</article>

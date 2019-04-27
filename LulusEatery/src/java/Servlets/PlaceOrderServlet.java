@@ -49,6 +49,7 @@ public class PlaceOrderServlet extends HttpServlet {
         boolean itemlistadded = false;
         boolean timechanged = false;
         
+        
 
         try {
             customer.setFname(request.getParameter("firstname"));

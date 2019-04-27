@@ -11,6 +11,7 @@ function process() {
 	var isValid = Luhn(strToTest);
 	if (isValid) {
             $("ccRes").innerHTML = "<span class='valid'> Credit card # is valid</span>";
+            $("submit").setAttribute("type", "submit");
 	} else {
             $("ccRes").innerHTML = "<span class='invalid'> Credit card # is invalid</span>";
         }
