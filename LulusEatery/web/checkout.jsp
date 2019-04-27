@@ -86,7 +86,7 @@
                                                         Credit Card
                                                     </td>
                                                     <td>
-                                                        <input type="text" id="ccnumber" required="required"/>
+                                                        <input type="text" name="ccnumber" id="ccnumber" required="required"/>
                                                     </td>
                                                     <td>
                                                         <input type="button" id="testCC" value="Verify" />

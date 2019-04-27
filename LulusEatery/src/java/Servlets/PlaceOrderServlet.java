@@ -57,6 +57,8 @@ public class PlaceOrderServlet extends HttpServlet {
             customer.setPhone(request.getParameter("phone"));
             customer.setEmail(request.getParameter("email"));
             customer.setCcnumber(request.getParameter("ccnumber"));
+            String cc = request.getParameter("ccnumber");
+            String test = "";
             custadded = CustomerDB.addCustomer(customer);
             if (custadded) {
                 //msg += "Customer added: " + customer.getCustomerID() + "<br>";
