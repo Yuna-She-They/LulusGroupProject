@@ -72,7 +72,54 @@ public class PlaceOrderServlet extends HttpServlet {
         if (custadded) {
             try {
                 pickupstring = String.valueOf(request.getSession().getAttribute("pickuptime"));
-                pickuptime = formatter.parse(String.valueOf(request.getSession().getAttribute("pickuptime")));
+                //for auto time, the previous statement gives yyyy-MM-dd HH:mm. For selected time, gives, eg "Thu May 02 HH:mm:ss CDT YYYY" which is unparseable
+                //break the latter down. if it starts with yyyy it starts with "2", but if it doesn't it's the select time:
+                if (!pickupstring.startsWith("2")) {
+                    try {
+                        Date currenttime = new Date();
+                        Calendar cal = Calendar.getInstance();
+
+                        //split by space:
+                        String[] splitpt = pickupstring.split("\\s+");
+                        String splitmonth = splitpt[1];
+                        if (splitmonth.startsWith("Jan")) {
+                            cal.set(Calendar.MONTH, 0);
+                        } else if (splitmonth.startsWith("Feb")) {
+                            cal.set(Calendar.MONTH, 1);
+                        } else if (splitmonth.startsWith("Mar")) {
+                            cal.set(Calendar.MONTH, 2);
+                        } else if (splitmonth.startsWith("Apr")) {
+                            cal.set(Calendar.MONTH, 3);
+                        } else if (splitmonth.startsWith("May")) {
+                            cal.set(Calendar.MONTH, 4);
+                        } else if (splitmonth.startsWith("Jun")) {
+                            cal.set(Calendar.MONTH, 5);
+                        } else if (splitmonth.startsWith("Jul")) {
+                            cal.set(Calendar.MONTH, 6);
+                        } else if (splitmonth.startsWith("Aug")) {
+                            cal.set(Calendar.MONTH, 7);
+                        } else if (splitmonth.startsWith("Sep")) {
+                            cal.set(Calendar.MONTH, 8);
+                        } else if (splitmonth.startsWith("Oct")) {
+                            cal.set(Calendar.MONTH, 9);
+                        } else if (splitmonth.startsWith("Nov")) {
+                            cal.set(Calendar.MONTH, 10);
+                        } else if (splitmonth.startsWith("Dec")) {
+                            cal.set(Calendar.MONTH, 11);
+                        }
+                        cal.set(Calendar.DAY_OF_MONTH, Integer.parseInt(splitpt[2]));
+                        String hourmin = splitpt[3];
+                        String[] splithourmin = hourmin.split(":");
+                        cal.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splithourmin[0]));
+                        cal.set(Calendar.MINUTE, Integer.parseInt(splithourmin[1]));
+                        cal.set(Calendar.YEAR, Integer.parseInt(splitpt[5]));
+                        pickuptime = cal.getTime();
+                    } catch (Exception e) {
+                        msg += "Time parse error: " + e.getMessage();
+                    }
+                } else {//if next available time asked for
+                    pickuptime = formatter.parse(String.valueOf(request.getSession().getAttribute("pickuptime")));
+                }
                 
                 try {
                     Date currenttime = new Date();
