@@ -32,6 +32,10 @@
         <servlet-name>ViewDetailsServlet</servlet-name>
         <servlet-class>Servlets.ViewDetailsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PlaceOrderServlet</servlet-name>
+        <servlet-class>Servlets.PlaceOrderServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>OrderServlet</servlet-name>
         <url-pattern>/Order</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ViewDetailsServlet</servlet-name>
         <url-pattern>/ViewDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlaceOrderServlet</servlet-name>
+        <url-pattern>/PlaceOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

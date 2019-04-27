@@ -274,7 +274,7 @@
                                             </table>
                                             <br>
                                             <div class="buttonholder">
-						<input type="submit" id="submit" value="Review Cart">
+						<input type="submit" id="submit" name="viewcart" value="Review Cart">
                                             </div>
                                         </form>
 				</article>

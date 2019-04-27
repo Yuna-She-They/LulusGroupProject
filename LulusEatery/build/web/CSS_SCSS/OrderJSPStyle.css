@@ -92,7 +92,7 @@ a:active {
     text-align: center;
 }
 
-#submit, #testCC {
+#submit{
 	border: 0px;
 	text-align: center;
         font-size: 16px;
@@ -105,12 +105,12 @@ a:active {
         background-color: #43a554;
 }
 
-#submit:hover, #testCC:hover {
+#submit:hover {
 	background-color: #ff6a00;
 	
 }
 
-#submit:active, #testCC:active {
+#submit:active {
     background-color: #898989;
 }
 

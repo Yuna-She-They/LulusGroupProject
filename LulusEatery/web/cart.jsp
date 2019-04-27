@@ -43,28 +43,26 @@
                                         <br>
                                         (Pickup available Monday&ndash;Saturday, Noon&ndash;8:30 PM)
                                         <br><br>
-					<form action="SubmitOrder" method="post">
+					<form action="Cart" method="post">
 						<table>
 							<tr>
-								<td><span class=tableheader>Delete</span></td>
 								<td><span class=tableheader>Qty</span></td>
 								<td><span class=tableheader>Name</span></td>
 								<td><span class=tableheader>Price Each</span></td>
 							</tr>
-							<c:forEach var="itemlist" items="${itemlistlist}">
-								<tr>
-                                                                    
-									<td><input type="checkbox" name="${itemlist.item.name}" value="${itemlist.item.name}"></td>
-                                                                        <td>
-                                                                            <select name="${itemlist.itemID}">
-                                                                                <c:forEach var="i" begin="1" end="20">
-                                                                                    <option value="${i}" ${itemlist.quantity == i ? 'selected' : ''}>${i}</option>
-                                                                                </c:forEach>
-                                                                            </select>
-                                                                        </td>
-									<td>${itemlist.item.name}</td>
-									<td><fmt:formatNumber value="${itemlist.item.price}" type="currency"/></td>
-								</tr>
+							<c:forEach var="itemlist" items="${cart}">
+                                                            <input type="hidden" name="itemID" value="${itemlist.itemID}">
+                                                            <tr>
+                                                                <td>
+                                                                    <select name="${itemlist.itemID}">
+                                                                        <c:forEach var="i" begin="0" end="20">
+                                                                            <option value="${i}" ${itemlist.quantity == i ? 'selected' : ''}>${i}</option>
+                                                                        </c:forEach>
+                                                                    </select>
+                                                                </td>
+                                                                <td>${itemlist.item.name}</td>
+                                                                <td><fmt:formatNumber value="${itemlist.item.price}" type="currency"/></td>
+                                                            </tr>
 							</c:forEach>
                                                         <%--
                                                         <c:forEach var="item" items="${orderitems}">
@@ -77,18 +75,15 @@
                                                             </tr>
 							</c:forEach>
                                                         --%>
+                                                        <tr><td colspan="3">Total: <fmt:formatNumber value="${total}" type="currency"/></td></tr>
 						</table>
-                                                <div class="creditcard">
-                                                    <input type="text" id="ccnumber" placeholder="credit card number" />
-                                                    <input type="button" id="testCC" value="Test CC#" />
-                                                    <span id="ccRes"></span>
-                                                </div>
+                                                
 						<div class="buttonholder">
 							<!--just go back to order.jsp-->
 							<input type="submit" id="submit" name="back" value="Add More" />
-							<!--update itemlistlist-->
+							<!--update cart-->
 							<input type="submit" id="submit" name="update" value="Update" />
-							<input type="submit" id="submit" name="place" value="Place Order" />
+							<input type="submit" id="submit" name="checkout" value="Check Out" />
 						</div>
 					</form>
 				</article>

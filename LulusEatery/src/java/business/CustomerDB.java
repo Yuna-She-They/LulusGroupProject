@@ -31,4 +31,24 @@ public class CustomerDB {
         }
         return customers;
     }
+    public static boolean addCustomer (Customer customer){
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session = null;
+        boolean dbstat = false;
+        try {
+            session = sessionFactory.openSession();
+            session.beginTransaction();
+            session.save(customer);
+            session.getTransaction().commit();
+            
+            dbstat = true;
+        } catch (Exception e) {
+            if (session != null) {
+                session.getTransaction().rollback();
+            }
+        } finally {
+            session.close();
+        }
+        return dbstat;
+    }
 }

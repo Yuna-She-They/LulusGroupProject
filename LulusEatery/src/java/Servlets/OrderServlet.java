@@ -32,9 +32,9 @@ public class OrderServlet extends HttpServlet {
         
         //removes cart when "begin order" is clicked
         try {
-            request.getSession().removeAttribute("itemlistlist");
+            request.getSession().removeAttribute("cart");
         } catch (Exception e) {
-            msg = "list not removed" + e.getMessage() + "<br>";
+            msg = "Cart not removed. " + e.getMessage() + "<br>";
         }
         
         

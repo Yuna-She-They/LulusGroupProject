@@ -10,9 +10,9 @@ function process() {
 	var strToTest = $("ccnumber").value;
 	var isValid = Luhn(strToTest);
 	if (isValid) {
-            $("ccRes").innerHTML = "credit card number is valid";
+            $("ccRes").innerHTML = "<span class='valid'> Credit card # is valid</span>";
 	} else {
-            $("ccRes").innerHTML = "credit card number is not valid";
+            $("ccRes").innerHTML = "<span class='invalid'> Credit card # is invalid</span>";
         }
 }
 
