@@ -39,6 +39,9 @@
                                     ${msg}
 					<h1>Thank you for your order, ${placedcustomer.fname}!</h1>
                                         <br>
+                                        Your credit card has not yet been charged. Please bring it in for payment at pickup.
+                                        <br>
+                                        <br>
                                         Pickup time: ${placedinvoice.weekdaypickupdate}
                                         <c:if test="${timechanged}">
                                             <div class="timechanged">
