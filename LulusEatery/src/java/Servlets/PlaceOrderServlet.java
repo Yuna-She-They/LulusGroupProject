@@ -112,11 +112,11 @@ public class PlaceOrderServlet extends HttpServlet {
 
         if (validinput) {
             try {
-                customer.setFname("firstname");
-                customer.setLname("lastname");
-                customer.setPhone("phone");
-                customer.setEmail("email");
-                customer.setCcnumber("ccnumber");
+                customer.setFname(firstname);
+                customer.setLname(lastname);
+                customer.setPhone(phone);
+                customer.setEmail(email);
+                customer.setCcnumber(ccnumber);
 
                 custadded = CustomerDB.addCustomer(customer);
                 if (custadded) {
