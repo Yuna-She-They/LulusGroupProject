@@ -48,28 +48,88 @@ public class PlaceOrderServlet extends HttpServlet {
         boolean invoiceadded = false;
         boolean itemlistadded = false;
         boolean timechanged = false;
+        String firstname="";
+        String lastname="";
+        String phone="";
+        String email="";
+        String ccnumber ="";
+        boolean validinput = true;
+        boolean badname = false;
         
-        
-
         try {
-            customer.setFname(request.getParameter("firstname"));
-            customer.setLname(request.getParameter("lastname"));
-            customer.setPhone(request.getParameter("phone"));
-            customer.setEmail(request.getParameter("email"));
-            customer.setCcnumber(request.getParameter("ccnumber"));
-            String cc = request.getParameter("ccnumber");
-            String test = "";
-            custadded = CustomerDB.addCustomer(customer);
-            if (custadded) {
-                //msg += "Customer added: " + customer.getCustomerID() + "<br>";
-                request.getSession().setAttribute("placedcustomer", customer);
-            } else {
-                msg += "Customer not added.<br>";
+            firstname = request.getParameter("firstname");
+            request.getSession().setAttribute("firstname", firstname);
+            lastname = request.getParameter("lastname");
+            request.getSession().setAttribute("lastname", lastname);
+            phone = request.getParameter("phone");
+            request.getSession().setAttribute("phone", phone);
+            email = request.getParameter("email");
+            request.getSession().setAttribute("email", email);
+            ccnumber = request.getParameter("ccnumber");
+            request.getSession().setAttribute("ccnumber", ccnumber);
+            
+            char[] chars = firstname.toCharArray();
+
+            for (char c : chars) {
+                if(!Character.isLetter(c)) {
+                    badname=true;
+                    validinput = false;
+                }
             }
             
+            char[] chars2 = lastname.toCharArray();
+
+            for (char c : chars2) {
+                if(!Character.isLetter(c)) {
+                    validinput = false;
+                    badname=true;
+                }
+            }
+            
+            if (badname) {
+                msg += "Please use only letters for name.<br>";
+            }
+            
+            if (phone.length() != 10) {
+                msg += "Please enter a 10 digit phone.<br>";
+                validinput = false;
+            }
+            
+            try {
+                Double num = Double.parseDouble(phone);
+            } catch (Exception e) {
+                msg +="Please use only numbers for phone.<br>";
+                validinput = false;
+            }
+            
+            if (!validinput) {
+                
+            }
             
         } catch (Exception e) {
-            msg = "Customer write error: " + e.getMessage();
+            msg += "Info read error: " + e.getMessage() + "<br>";
+        }
+
+        if (validinput) {
+            try {
+                customer.setFname("firstname");
+                customer.setLname("lastname");
+                customer.setPhone("phone");
+                customer.setEmail("email");
+                customer.setCcnumber("ccnumber");
+
+                custadded = CustomerDB.addCustomer(customer);
+                if (custadded) {
+                    //msg += "Customer added: " + customer.getCustomerID() + "<br>";
+                    request.getSession().setAttribute("placedcustomer", customer);
+                } else {
+                    msg += "Customer not added.<br>";
+                }
+
+
+            } catch (Exception e) {
+                msg = "Customer write error: " + e.getMessage();
+            }
         }
         
         if (custadded) {
