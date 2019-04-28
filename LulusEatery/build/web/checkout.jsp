@@ -52,7 +52,7 @@
                                                         First name
                                                     </td>
                                                     <td>
-                                                        <input type="text" name="firstname" required="required" autofocus="autofocus" value="${firstname}">
+                                                        <input type="text" name="firstname" required="required" autofocus="autofocus" value="${firstname}" placeholder="Alphabetical letters only">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -60,7 +60,7 @@
                                                         Last name
                                                     </td>
                                                     <td>
-                                                       <input type="text" name="lastname" required="required" value="${lastname}"> 
+                                                       <input type="text" name="lastname" required="required" value="${lastname}" placeholder="Alphabetical letters only"> 
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -76,7 +76,7 @@
                                                         Email
                                                     </td>
                                                     <td>
-                                                        <input type="email" name="email" required="required" value="${email}">
+                                                        <input type="email" name="email" required="required" value="${email}" placeholder="Must be valid email">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -84,11 +84,11 @@
                                                         Credit Card
                                                     </td>
                                                     <td>
-                                                        <input type="text" name="ccnumber" id="ccnumber" required="required" value="${ccnumber}"/>
+                                                        <input type="text" name="ccnumber" id="ccnumber" required="required" value="${ccnumber}" placeholder="Click 'verify' after entering">
                                                     </td>
                                                     <td>
                                                         <input type="button" id="testCC" value="Verify" />
-                                                        <span id="ccRes"></span>
+                                                        <span id="ccRes">Please verify to continue.</span>
                                                     </td>
                                                 </tr>
                                             </table>
