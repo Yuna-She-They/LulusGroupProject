@@ -135,6 +135,7 @@ input[type="text"] {
     padding-right:2px;
     color: black;
     font-size: 16px;
+    font-weight: normal;
     font-family: Montserrat,Verdana,Arial,sans-serif;
 }
 
@@ -184,6 +185,6 @@ table td:last-child {
 }
 
 .visible {
-  color: #d15b57;
+  color: #008000;
   font-weight: bold;
 }

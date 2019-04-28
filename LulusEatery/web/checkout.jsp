@@ -43,8 +43,6 @@
 					<h1>Check Out</h1>
                                         Pickup time: <span class="visible">${invoice.weekdaypickupdate}</span>
                                         <br>
-                                        (Pickup available Monday&ndash;Saturday, Noon&ndash;8:30 PM)
-                                        <br>
                                         Total: <span class="visible"><fmt:formatNumber value="${total}" type="currency"/></span>
                                         <br>
 					<form action="PlaceOrder" method="post">
