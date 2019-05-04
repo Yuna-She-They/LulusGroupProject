@@ -30,7 +30,7 @@ public class OrderServlet extends HttpServlet {
         Date pickuptime;
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
         
-        //removes cart when "begin order" is clicked
+        //removes cart and total when "begin order" is clicked
         try {
             request.getSession().removeAttribute("cart");
             request.getSession().removeAttribute("total");

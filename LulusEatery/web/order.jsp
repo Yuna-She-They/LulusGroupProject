@@ -136,7 +136,10 @@
                                                 <c:if test="${item.category == 'Starter'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}" ${paramValues.itemID.stream().anyMatch(v->v == item.itemID).get() ? 'checked' : ''}></td><!--https://stackoverflow.com/questions/3937624/how-can-i-retain-html-form-field-values-in-jsp-after-submitting-form-to-servlet-->
+                                                            <!--2 options placed within input but would only keep the first checked (took out <s and $s to keep it commented out here):
+                                                            c:if test="{param.itemID == item.itemID}">checked="true"/c:if
+                                                            {param.itemID==item.itemID ? 'checked=checked' : ''}-->
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
@@ -167,7 +170,7 @@
                                                 <c:if test="${item.category == 'Burger'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}" ${paramValues.itemID.stream().anyMatch(v->v == item.itemID).get() ? 'checked' : ''}></td>
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
@@ -197,7 +200,7 @@
                                                 <c:if test="${item.category == 'Tacos'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}" ${paramValues.itemID.stream().anyMatch(v->v == item.itemID).get() ? 'checked' : ''}></td>
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
@@ -227,7 +230,7 @@
                                                 <c:if test="${item.category == 'Bowl'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}" ${paramValues.itemID.stream().anyMatch(v->v == item.itemID).get() ? 'checked' : ''}></td>
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
@@ -257,7 +260,7 @@
                                                 <c:if test="${item.category == 'Kids'}">
                                                     
                                                         <tr>
-                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}"></td>
+                                                            <td><input type="checkbox" name="itemID" value="${item.itemID}" ${paramValues.itemID.stream().anyMatch(v->v == item.itemID).get() ? 'checked' : ''}></td>
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
