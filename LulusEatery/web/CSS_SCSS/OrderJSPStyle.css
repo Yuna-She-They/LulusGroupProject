@@ -188,3 +188,7 @@ table td:last-child {
   color: #008000;
   font-weight: bold;
 }
+
+.tax {
+    text-align: right;
+}

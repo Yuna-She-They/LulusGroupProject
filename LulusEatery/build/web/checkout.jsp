@@ -43,7 +43,7 @@
 					<h1>Check Out</h1>
                                         Pickup time: <span class="visible">${invoice.weekdaypickupdate}</span>
                                         <br>
-                                        Total: <span class="visible"><fmt:formatNumber value="${total}" type="currency"/></span>
+                                        Total: <span class="visible"><fmt:formatNumber value="${total}" type="currency"/></span> -Tax will be calculated at pickup-
                                         <br>
 					<form action="PlaceOrder" method="post">
                                             <table>

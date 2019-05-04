@@ -3,21 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/order.html</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/viewdetails.jsp</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/ViewDetailsServlet.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/ItemList.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/Item.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/Invoice.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/OrderServlet.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/InvoiceDB.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/orderplaced.jsp</file>
             <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/cart.jsp</file>
             <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/ItemDB.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/ViewOrders.jsp</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/ViewOrdersServlet.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/LogonServlet.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/business/ItemList.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/PlaceOrderServlet.java</file>
             <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/CartServlet.java</file>
-            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/order.jsp</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/src/java/Servlets/OrderServlet.java</file>
+            <file>file:/C:/Users/win10/Desktop/LulusGroupProject/LulusEatery/web/checkout.jsp</file>
         </group>
     </open-files>
 </project-private>

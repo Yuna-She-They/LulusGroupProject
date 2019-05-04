@@ -79,7 +79,7 @@
                                                         --%>
                                                         <tr><td colspan="3">Total: <fmt:formatNumber value="${total}" type="currency"/></td></tr>
 						</table>
-                                                
+                                                <div class="tax">Tax will be calculated at pickup</div>
 						<div class="buttonholder">
 							<!--just go back to order.jsp-->
 							<input type="submit" id="submit" name="back" value="Add More" />
