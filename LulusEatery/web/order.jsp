@@ -108,7 +108,7 @@
                                           <!--number 3-->
                                           <!--<div style="width: 250px; margin: 50px auto;">-->
                                                 <div id="picker"> </div>
-                                                <input type="hidden" name="pickuptime" id="pickuptime" value="" />
+                                                <input type="text" name="pickuptime" id="pickuptime" value="${ptformat}" />
                                                 <!--<input name="pickuptimetest" value="2019-08-08">-->
                                             <!--</div>-->
                                             (Pickup available Monday&ndash;Saturday, Noon&ndash;8:30 PM)
