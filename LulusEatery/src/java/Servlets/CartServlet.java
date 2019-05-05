@@ -60,19 +60,20 @@ public class CartServlet extends HttpServlet {
         
         
         if (request.getParameter("viewcart") != null) {
-            
-            try {
-                String pt = String.valueOf(request.getSession().getAttribute("pickuptime"));
-                if (pt != null) {
-                    
-                }
-            } catch (Exception e) {
-                //nothing
-            }
 
             try {
+                
                 readynow = String.valueOf(request.getSession().getAttribute("readynow"));
                 if (readynow.equals("later")) {
+                    
+                    try {
+                        String pt = String.valueOf(request.getParameter("pickuptime"));
+                        if (pt != null) {
+                            request.getSession().setAttribute("ptformat", pt);
+                        }
+                    } catch (Exception e) {
+                        //nothing
+                    }
 
                       //use String to check availability:
                       try {
