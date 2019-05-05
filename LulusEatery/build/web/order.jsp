@@ -66,8 +66,7 @@
     })
     </script>
 </div>
-
-
+        
 		<title>Order - Lulu's Local Eatery</title>
 	</head>
 	<body id="page-top">
@@ -108,7 +107,7 @@
                                           <!--number 3-->
                                           <!--<div style="width: 250px; margin: 50px auto;">-->
                                                 <div id="picker"> </div>
-                                                <input type="text" name="pickuptime" id="pickuptime" value="${ptformat}" />
+                                                <input type="hidden" name="pickuptime" id="pickuptime" value="${ptformat}" />
                                                 <!--<input name="pickuptimetest" value="2019-08-08">-->
                                             <!--</div>-->
                                             (Pickup available Monday&ndash;Saturday, Noon&ndash;8:30 PM)
@@ -137,17 +136,13 @@
                                                     
                                                         <tr>
                                                             <td><input type="checkbox" name="itemID" value="${item.itemID}" ${paramValues.itemID.stream().anyMatch(v->v == item.itemID).get() ? 'checked' : ''}></td><!--https://stackoverflow.com/questions/3937624/how-can-i-retain-html-form-field-values-in-jsp-after-submitting-form-to-servlet-->
-                                                            <!--2 options placed within input but would only keep the first checked (took out <s and $s to keep it commented out here):
-                                                            c:if test="{param.itemID == item.itemID}">checked="true"/c:if
-                                                            {param.itemID==item.itemID ? 'checked=checked' : ''}-->
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
-                                                                        <option value="${i}">${i}</option>
+                                                                        <option value="${i}" ${paramValues[item.itemID.toString()].stream().anyMatch(v->v == i).get() ? 'selected' : ''}>${i}</option>
                                                                     </c:forEach>
                                                                 </select>
                                                             </td>
-                                                            <%--old way: <td><input type="text" name="${item.itemID}" value="1"/></td>--%>
                                                             <td>${item.name}</td>
                                                             <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
                                                         </tr>
@@ -166,24 +161,22 @@
                                                     <td><span class=tableheader>Name</span></td>
                                                     <td><span class=tableheader>Price</span></td>
                                                 </tr>
-                                            <c:forEach var="item" items="${items}">
-                                                <c:if test="${item.category == 'Burger'}">
-                                                    
+                                                <c:forEach var="item" items="${items}">
+                                                    <c:if test="${item.category == 'Burger'}">
                                                         <tr>
                                                             <td><input type="checkbox" name="itemID" value="${item.itemID}" ${paramValues.itemID.stream().anyMatch(v->v == item.itemID).get() ? 'checked' : ''}></td>
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
-                                                                        <option value="${i}">${i}</option>
+                                                                        <option value="${i}" ${paramValues[item.itemID.toString()].stream().anyMatch(v->v == i).get() ? 'selected' : ''}>${i}</option>
                                                                     </c:forEach>
                                                                 </select>
                                                             </td>
                                                             <td>${item.name}</td>
                                                             <td><fmt:formatNumber value="${item.price}" type="currency"/></td>
                                                         </tr>
-                                                    
-                                                </c:if>
-                                            </c:forEach>
+                                                    </c:if>
+                                                </c:forEach>
                                             </table>
                                             <br>
                                             <div class="ordertitle">
@@ -204,7 +197,7 @@
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
-                                                                        <option value="${i}">${i}</option>
+                                                                        <option value="${i}" ${paramValues[item.itemID.toString()].stream().anyMatch(v->v == i).get() ? 'selected' : ''}>${i}</option>
                                                                     </c:forEach>
                                                                 </select>
                                                             </td>
@@ -234,7 +227,7 @@
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
-                                                                        <option value="${i}">${i}</option>
+                                                                        <option value="${i}" ${paramValues[item.itemID.toString()].stream().anyMatch(v->v == i).get() ? 'selected' : ''}>${i}</option>
                                                                     </c:forEach>
                                                                 </select>
                                                             </td>
@@ -264,7 +257,7 @@
                                                             <td>
                                                                 <select name="${item.itemID}">
                                                                     <c:forEach var="i" begin="1" end="20">
-                                                                        <option value="${i}">${i}</option>
+                                                                        <option value="${i}" ${paramValues[item.itemID.toString()].stream().anyMatch(v->v == i).get() ? 'selected' : ''}>${i}</option>
                                                                     </c:forEach>
                                                                 </select>
                                                             </td>
