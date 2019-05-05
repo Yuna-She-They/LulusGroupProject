@@ -38,25 +38,26 @@ public class CartServlet extends HttpServlet {
         double total = 0.0;
         boolean invalidtime=false;
         
+        //the following is commented out because now I just want to rebuild the whole thing since items stay checked when going back
         //check to see if cart has anything already (ie "add more" was clicked, also works if using back button).
         //Can duplicate an item if the user does so and selects an item they've already added. 
         //Maybe put check before adding item to cart in the else within the next try, and if its already there increase quantity
         //or could not display item on order.jsp if it's already in cart. probably the former option
-        try {
-            List<ItemList> ill = (List<ItemList>) request.getSession().getAttribute("cart");
-            if (ill!=null && ill.size()>0){
-                cart = ill;
-            }
-        } catch (Exception e) {
-            msg += "Cart read error. " + e.getMessage();
-        }
+//        try {
+//            List<ItemList> ill = (List<ItemList>) request.getSession().getAttribute("cart");
+//            if (ill!=null && ill.size()>0){
+//                cart = ill;
+//            }
+//        } catch (Exception e) {
+//            msg += "Cart read error. " + e.getMessage();
+//        }
         
         //grab total if it exists, otherwise doesn't count items added before clicking "add more" / going back
-        try {
-            total = (Double) request.getSession().getAttribute("total");
-        } catch (Exception e) {
-            //there was no total
-        }
+//        try {
+//            total = (Double) request.getSession().getAttribute("total");
+//        } catch (Exception e) {
+//            //there was no total
+//        }
         
         
         if (request.getParameter("viewcart") != null) {
